@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUANTA — sitio del desarrollador</title>
+<meta name="description" content="Sitio del desarrollador de QUANTA: política de privacidad, contacto y app-ads.txt.">
+<style>
+  :root { --ink:#05070e; --far:#101c33; --action:#49e0ff; --text:#e6f1ff; --dim:#8ea3c4; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--ink); color:var(--text);
+         font:16px/1.65 ui-monospace, "SFMono-Regular", Consolas, monospace;
+         padding:3rem 1.25rem 5rem; }
+  main { max-width:46rem; margin:0 auto; }
+  h1 { font-size:2rem; letter-spacing:.22em; margin:0 0 .25rem; color:var(--action);
+       text-shadow:0 0 22px rgba(73,224,255,.35); }
+  .sub { color:var(--dim); margin:0 0 2.5rem; }
+  h2 { font-size:1rem; letter-spacing:.12em; text-transform:uppercase;
+       color:var(--action); margin:2.5rem 0 .75rem; }
+  a { color:var(--action); }
+  ul { padding-left:1.2rem; }
+  li { margin:.4rem 0; }
+  code { background:var(--far); padding:.15em .45em; border-radius:4px; color:var(--text); }
+  .card { background:var(--far); border:1px solid rgba(73,224,255,.18);
+          border-radius:10px; padding:1rem 1.25rem; margin:1rem 0; }
+  footer { margin-top:3rem; color:var(--dim); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>QUANTA</h1>
+  <p class="sub">sitio del desarrollador · chavamoon</p>
+
+  <p>
+    QUANTA es un runner de partículas para Android con reto diario y ranking
+    mundial. Este sitio existe para cumplir los requisitos de Google Play y de
+    Google AdMob (verificación de <code>app-ads.txt</code>).
+  </p>
+
+  <div class="card">
+    <strong>Política de privacidad</strong><br>
+    <a href="quanta/privacy/">chavamoon.github.io/quanta/privacy/</a>
+  </div>
+
+  <h2>Contacto</h2>
+  <p>Soporte, reportes y pedidos de borrado de datos: <a href="mailto:salvadorlunahdz@hotmail.com">salvadorlunahdz@hotmail.com</a></p>
+
+  <h2>Archivos</h2>
+  <ul>
+    <li><a href="app-ads.txt">app-ads.txt</a></li>
+    <li><a href="quanta/privacy/">quanta/privacy/</a></li>
+  </ul>
+
+  <footer>
+    QUANTA · Godot Engine · <span id="y">2026</span>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
+</main>
+</body>
+</html>
