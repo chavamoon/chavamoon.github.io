@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUANTA — an endless momentum platformer for Android</title>
+<meta name="description" content="QUANTA: an endless momentum platformer. You never stop running — dash through hazards, chain combos, race the same daily track as everyone else.">
+<style>
+  :root { --ink:#05070e; --far:#101c33; --action:#49e0ff; --gold:#ffd166; --text:#e6f1ff; --dim:#8ea3c4; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--ink); color:var(--text);
+         font:16px/1.7 ui-monospace, "SFMono-Regular", Consolas, monospace;
+         padding:3.5rem 1.25rem 5rem; }
+  main { max-width:46rem; margin:0 auto; }
+  .back { font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; margin:0 0 2rem; }
+  h1 { font-size:2.3rem; letter-spacing:.22em; margin:0 0 .4rem; color:var(--action);
+       text-shadow:0 0 26px rgba(73,224,255,.35); }
+  .role { color:var(--dim); margin:0 0 2.2rem; }
+  h2 { font-size:.9rem; letter-spacing:.16em; text-transform:uppercase; color:var(--action);
+       margin:2.9rem 0 .8rem; }
+  p { margin:0 0 1rem; }
+  a { color:var(--action); text-decoration:none; border-bottom:1px solid rgba(73,224,255,.35); }
+  a:hover { border-bottom-color:var(--action); }
+  ul { padding-left:1.15rem; margin:0 0 1rem; }
+  li { margin:.4rem 0; }
+  code { background:var(--far); padding:.12em .42em; border-radius:4px; }
+  .box { background:var(--far); border:1px solid rgba(73,224,255,.18); border-radius:12px;
+         padding:1rem 1.25rem; margin:1.4rem 0; }
+  .box b { color:var(--gold); }
+  footer { margin-top:3.5rem; padding-top:1.2rem; border-top:1px solid rgba(142,163,196,.22);
+           color:var(--dim); font-size:.82rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="../">← Salvador Luna</a></p>
+
+  <h1>QUANTA</h1>
+  <p class="role">Endless momentum platformer · Android</p>
+
+  <div class="box">
+    <b>Coming soon.</b> QUANTA is in closed testing on Google Play right now.
+    There is no public download link yet.
+  </div>
+
+  <p>
+    QUANTA is a run game with no run button. You move forward on your own and keep
+    accelerating, so the whole game is about reading what comes next: jump,
+    double jump, wall jump, and dash.
+  </p>
+
+  <h2>The run</h2>
+  <ul>
+    <li><strong>Dash is the only defence.</strong> It turns you into a ghost for a
+      fraction of a second so you pass <em>through</em> a hazard instead of
+      breaking it. Hazards stay where they are, so the level never gets easier.
+      It costs a cooldown, and you can see that cost in the dash bar.</li>
+    <li><strong>One hit ends the run.</strong> No lives, no shield, no health bar.</li>
+    <li><strong>The combo is the score.</strong> Pop balloons in chains to climb the
+      ranks, from D up to SSS. Let the window expire and you drop a single rank, so
+      chasing one more cluster is always a real decision.</li>
+    <li><strong>A daily run.</strong> Every day has its own track, built from a seed
+      everyone shares. Play it, share the seed, then race your own best run as a
+      ghost with a live distance delta.</li>
+    <li><strong>A world leaderboard</strong> for the daily run — optional, with a
+      nickname you choose.</li>
+  </ul>
+
+  <h2>Details</h2>
+  <ul>
+    <li>Endless procedural levels that get faster and tighter with distance.</li>
+    <li>Hand-tuned chunks on top of the procedural generator, so the hard parts are
+      designed, not random.</li>
+    <li>Desktop-style controls on a phone: tap anywhere to jump, swipe right to dash.</li>
+    <li>A curated bank of real science facts, shown when you die and on the title
+      screen.</li>
+    <li>All art and music generated in code — small download, no asset packs.</li>
+    <li>English and Spanish, following your device language.</li>
+  </ul>
+
+  <h2>Tech</h2>
+  <p>
+    Built with <strong>Godot 4.6</strong>, targeting Android. Levels are generated
+    from a seed and the physics are deterministic, so the same seed is the same
+    track for everyone.
+  </p>
+
+  <h2>Legal</h2>
+  <p>
+    <a href="privacy/">Privacy policy</a> ·
+    <a href="../app-ads.txt">app-ads.txt</a>
+  </p>
+
+  <footer>
+    QUANTA · Salvador Luna (<a href="https://github.com/chavamoon">chavamoon</a>) ·
+    <a href="mailto:salvadorlunahdz@hotmail.com">salvadorlunahdz@hotmail.com</a>
+  </footer>
+</main>
+</body>
+</html>

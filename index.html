@@ -1,58 +1,90 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QUANTA — sitio del desarrollador</title>
-<meta name="description" content="Sitio del desarrollador de QUANTA: política de privacidad, contacto y app-ads.txt.">
+<title>Salvador Luna — Data Scientist &amp; Game Developer</title>
+<meta name="description" content="Salvador Luna (chavamoon) — data scientist and game developer. Maker of QUANTA, an endless momentum platformer for Android.">
 <style>
-  :root { --ink:#05070e; --far:#101c33; --action:#49e0ff; --text:#e6f1ff; --dim:#8ea3c4; }
+  :root { --ink:#05070e; --far:#101c33; --action:#49e0ff; --gold:#ffd166; --text:#e6f1ff; --dim:#8ea3c4; }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--ink); color:var(--text);
-         font:16px/1.65 ui-monospace, "SFMono-Regular", Consolas, monospace;
-         padding:3rem 1.25rem 5rem; }
+         font:16px/1.7 ui-monospace, "SFMono-Regular", Consolas, monospace;
+         padding:3.5rem 1.25rem 5rem; }
   main { max-width:46rem; margin:0 auto; }
-  h1 { font-size:2rem; letter-spacing:.22em; margin:0 0 .25rem; color:var(--action);
-       text-shadow:0 0 22px rgba(73,224,255,.35); }
-  .sub { color:var(--dim); margin:0 0 2.5rem; }
-  h2 { font-size:1rem; letter-spacing:.12em; text-transform:uppercase;
-       color:var(--action); margin:2.5rem 0 .75rem; }
-  a { color:var(--action); }
-  ul { padding-left:1.2rem; }
-  li { margin:.4rem 0; }
-  code { background:var(--far); padding:.15em .45em; border-radius:4px; color:var(--text); }
-  .card { background:var(--far); border:1px solid rgba(73,224,255,.18);
-          border-radius:10px; padding:1rem 1.25rem; margin:1rem 0; }
-  footer { margin-top:3rem; color:var(--dim); font-size:.85rem; }
+  .eyebrow { color:var(--dim); letter-spacing:.28em; font-size:.75rem;
+             text-transform:uppercase; margin:0 0 .9rem; }
+  h1 { font-size:2.1rem; letter-spacing:.02em; margin:0 0 .4rem; color:var(--action);
+       text-shadow:0 0 26px rgba(73,224,255,.3); }
+  .role { font-size:1.05rem; margin:0 0 2.4rem; }
+  .role span { color:var(--dim); }
+  h2 { font-size:.9rem; letter-spacing:.16em; text-transform:uppercase; color:var(--action);
+       margin:2.9rem 0 .8rem; }
+  p { margin:0 0 1rem; }
+  a { color:var(--action); text-decoration:none; border-bottom:1px solid rgba(73,224,255,.35); }
+  a:hover { border-bottom-color:var(--action); }
+  ul { padding-left:1.15rem; margin:0 0 1rem; }
+  li { margin:.35rem 0; }
+  code { background:var(--far); padding:.12em .42em; border-radius:4px; }
+  .game { display:block; background:var(--far); border:1px solid rgba(73,224,255,.18);
+          border-radius:12px; padding:1.15rem 1.3rem; margin:1rem 0;
+          transition:border-color .15s, transform .15s; }
+  .game:hover { border-color:rgba(73,224,255,.45); transform:translateY(-2px); }
+  .game b { color:var(--action); letter-spacing:.18em; font-size:1.05rem; }
+  .game p { margin:.5rem 0 0; color:var(--dim); font-size:.95rem; }
+  .tag { display:inline-block; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
+         color:var(--gold); border:1px solid rgba(255,209,102,.35); border-radius:999px;
+         padding:.1rem .55rem; margin-left:.5rem; vertical-align:.14em; }
+  footer { margin-top:3.5rem; padding-top:1.2rem; border-top:1px solid rgba(142,163,196,.22);
+           color:var(--dim); font-size:.82rem; }
 </style>
 </head>
 <body>
 <main>
-  <h1>QUANTA</h1>
-  <p class="sub">sitio del desarrollador · chavamoon</p>
+  <p class="eyebrow">chavamoon</p>
+  <h1>Salvador Luna</h1>
+  <p class="role">Data scientist <span>·</span> game developer</p>
 
   <p>
-    QUANTA es un runner de partículas para Android con reto diario y ranking
-    mundial. Este sitio existe para cumplir los requisitos de Google Play y de
-    Google AdMob (verificación de <code>app-ads.txt</code>).
+    I work with data: machine learning, analytics, and the pipelines that make
+    both of them trustworthy. Outside of that I build small games, mostly to keep
+    my hands on the part of software where you can feel the result right away.
+  </p>
+  <p>
+    This site is my corner of the internet — a home for the games I release and
+    for the few documents a published app needs to exist.
   </p>
 
-  <div class="card">
-    <strong>Política de privacidad</strong><br>
-    <a href="quanta/privacy/">chavamoon.github.io/quanta/privacy/</a>
-  </div>
+  <h2>My games</h2>
 
-  <h2>Contacto</h2>
-  <p>Soporte, reportes y pedidos de borrado de datos: <a href="mailto:salvadorlunahdz@hotmail.com">salvadorlunahdz@hotmail.com</a></p>
+  <a class="game" href="quanta/">
+    <b>QUANTA</b><span class="tag">Android · in testing</span>
+    <p>
+      An endless momentum platformer. You never stop running: dash through
+      hazards, chain combos, and race the same daily track as everyone else.
+    </p>
+  </a>
 
-  <h2>Archivos</h2>
+  <h2>What I do</h2>
   <ul>
-    <li><a href="app-ads.txt">app-ads.txt</a></li>
-    <li><a href="quanta/privacy/">quanta/privacy/</a></li>
+    <li><strong>Data science</strong> — models, experiments and analysis that
+      people can actually act on.</li>
+    <li><strong>Data engineering</strong> — pipelines and tooling that keep the
+      numbers honest.</li>
+    <li><strong>Game development</strong> — small, self-contained projects built
+      with Godot.</li>
   </ul>
 
+  <h2>Contact</h2>
+  <p>
+    <a href="https://github.com/chavamoon">github.com/chavamoon</a><br>
+    <a href="mailto:salvadorlunahdz@hotmail.com">salvadorlunahdz@hotmail.com</a>
+  </p>
+
   <footer>
-    QUANTA · Godot Engine · <span id="y">2026</span>
+    <a href="quanta/privacy/">Privacy policy</a> ·
+    <a href="app-ads.txt">app-ads.txt</a><br>
+    Salvador Luna · Godot Engine · <span id="y">2026</span>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
 </main>
