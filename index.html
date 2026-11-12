@@ -5,152 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Salvador Luna — AI Engineer, agentic systems &amp; game developer</title>
 <meta name="description" content="Salvador Luna (chavamoon) — AI engineer working on agentic systems, MCP tool contracts and ontology engineering. Maker of QUANTA, an endless momentum platformer for Android.">
-<link rel="icon" href="assets/photo.jpg">
-<style>
-  :root {
-    --ink:#1f2328; --dim:#59636e; --rule:#d8dee4; --hair:#eceff2;
-    --paper:#ffffff; --wash:#f5f7fa; --blue:#1f6feb; --blue-ink:#0969da;
-    --chip:#b6d4fe; --dark:#0d1117; --dark-2:#161b22; --dark-rule:#21262d;
-    --on-dark:#c9d1d9; --on-dark-dim:#8b949e; --sky:#58a6ff;
-    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    --mono:ui-monospace,"SFMono-Regular","Cascadia Mono",Consolas,"Liberation Mono",monospace;
-  }
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { margin:0; background:var(--wash); color:var(--ink); font:16px/1.7 var(--sans);
-         -webkit-font-smoothing:antialiased; }
-
-  /* ---------- editor chrome ---------- */
-  .chrome { position:sticky; top:0; z-index:50; display:flex; align-items:center; gap:1rem;
-            height:38px; padding:0 .9rem; background:var(--dark);
-            border-bottom:1px solid var(--dark-rule); font-family:var(--mono); font-size:12px;
-            color:var(--on-dark-dim); }
-  .dots { display:flex; gap:7px; }
-  .dots i { width:10px; height:10px; border-radius:50%; display:block; }
-  .dots i:nth-child(1){ background:#ff5f57; } .dots i:nth-child(2){ background:#febc2e; }
-  .dots i:nth-child(3){ background:#28c840; }
-  .file { color:var(--on-dark); letter-spacing:.02em; white-space:nowrap; }
-  .file em { color:var(--sky); font-style:normal; }
-  nav.nav { margin-left:auto; display:flex; align-items:center; gap:2px; overflow-x:auto;
-            min-width:0; scrollbar-width:none; }
-  nav.nav::-webkit-scrollbar { display:none; }
-  nav.nav a { color:var(--on-dark-dim); text-decoration:none; padding:0 .55rem; line-height:38px;
-              border-bottom:2px solid transparent; white-space:nowrap; transition:color .15s; }
-  nav.nav a:hover { color:var(--on-dark); }
-  nav.nav a.on { color:var(--on-dark); border-bottom-color:var(--blue); }
-  nav.nav a.cv { color:var(--sky); margin-left:.5rem; border:1px solid rgba(88,166,255,.45);
-                 border-radius:999px; padding:.16rem .7rem; line-height:1.5; margin-top:6px; }
-  nav.nav a.cv:hover { background:rgba(88,166,255,.12); }
-
-  /* ---------- hero ---------- */
-  .hero { position:relative; background:var(--dark); color:#fff; overflow:hidden;
-          padding:3.2rem 1.5rem 2.2rem; }
-  .hero::before { content:""; position:absolute; inset:0;
-          background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
-                           linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
-          background-size:30px 30px; }
-  .hero::after { content:""; position:absolute; width:520px; height:520px; right:-140px; top:-240px;
-          background:radial-gradient(circle,rgba(31,111,235,.30),transparent 65%); }
-  .hero-in { position:relative; max-width:820px; margin:0 auto; display:flex; align-items:center;
-             gap:1.9rem; }
-  .photo { width:132px; height:132px; border-radius:14px; object-fit:cover; flex:none;
-           border:2px solid var(--blue); box-shadow:0 10px 30px rgba(0,0,0,.45); }
-  h1 { font-size:2.25rem; line-height:1.08; letter-spacing:-.02em; margin:0 0 .55rem;
-       font-weight:700; }
-  h1 em { display:block; font-style:normal; color:var(--sky); }
-  .tagline { font-family:var(--mono); font-size:.82rem; letter-spacing:.04em; color:var(--sky);
-             margin:0; }
-  .tagline span { color:#30363d; padding:0 .35em; }
-  .contacts { position:relative; max-width:820px; margin:2rem auto 0; padding-top:1.1rem;
-              border-top:1px solid rgba(240,246,252,.10); list-style:none;
-              display:flex; flex-wrap:wrap; gap:.55rem 1.5rem; font-family:var(--mono);
-              font-size:.76rem; color:var(--on-dark); }
-  .contacts li { display:flex; align-items:center; gap:.5rem; }
-  .contacts svg { width:14px; height:14px; stroke:var(--sky); fill:none; stroke-width:1.7;
-                  stroke-linecap:round; stroke-linejoin:round; flex:none; }
-  .contacts a { color:inherit; text-decoration:none; border-bottom:1px solid transparent; }
-  .contacts a:hover { border-bottom-color:var(--sky); }
-
-  /* ---------- document ---------- */
-  main { max-width:820px; margin:0 auto; padding:1rem 1.5rem 2rem; }
-  section { scroll-margin-top:56px; padding:2.6rem 0 0; }
-  h2 { font-family:var(--mono); font-size:.78rem; font-weight:700; letter-spacing:.14em;
-       text-transform:uppercase; color:var(--blue); margin:0 0 1.1rem; display:flex;
-       align-items:center; gap:.55rem; }
-  h2::before { content:"//"; color:#9aa4af; font-weight:400; }
-  h2::after { content:""; flex:1; height:1px; background:var(--rule); }
-  p { margin:0 0 1rem; max-width:64ch; }
-  .lead { font-size:1.06rem; }
-  a { color:var(--blue-ink); text-decoration:none; }
-  a:hover { text-decoration:underline; text-underline-offset:2px; }
-  .note { color:var(--dim); font-size:.86rem; }
-
-  .chips { display:flex; flex-wrap:wrap; gap:.4rem; margin:.4rem 0 1.6rem; }
-  .chips span { font-family:var(--mono); font-size:.74rem; letter-spacing:.02em;
-                color:var(--blue-ink); background:#fff; border:1px solid var(--chip);
-                border-radius:5px; padding:.16rem .5rem; }
-
-  .track { list-style:none; margin:0 0 1rem; padding:0; }
-  .track li { display:flex; align-items:baseline; justify-content:space-between; gap:1rem;
-              padding:.5rem 0; border-bottom:1px solid var(--hair); font-size:.94rem; }
-  .track li:last-child { border-bottom:0; }
-  .track .co { color:var(--dim); }
-  .track time { font-family:var(--mono); font-size:.74rem; color:var(--dim); white-space:nowrap; }
-
-  .game { display:block; background:#fff; border:1px solid var(--rule); border-radius:10px;
-          padding:1.1rem 1.25rem; margin:0 0 1rem; color:inherit;
-          transition:border-color .15s, box-shadow .15s, transform .15s; }
-  .game:hover { border-color:var(--blue); box-shadow:0 6px 20px rgba(9,105,218,.10);
-                transform:translateY(-1px); text-decoration:none; }
-  .game b { font-family:var(--mono); letter-spacing:.18em; font-size:1rem; color:var(--blue-ink); }
-  .game p { margin:.45rem 0 0; color:var(--dim); font-size:.94rem; }
-  .tag { display:inline-block; font-family:var(--mono); font-size:.68rem; letter-spacing:.08em;
-         text-transform:uppercase; color:#9a6700; border:1px solid rgba(154,103,0,.28);
-         background:#fff8c5; border-radius:999px; padding:.05rem .5rem; margin-left:.5rem;
-         vertical-align:.15em; }
-
-  .feed-group { border-top:1px solid var(--rule); padding-top:1.1rem; margin-top:1.4rem; }
-  .feed-group:first-child { border-top:0; padding-top:0; margin-top:.6rem; }
-  .feed-group h3 { display:flex; align-items:baseline; justify-content:space-between; gap:1rem;
-                   margin:0 0 .25rem; font-family:var(--mono); font-size:.7rem;
-                   letter-spacing:.14em; text-transform:uppercase; color:var(--blue); font-weight:700; }
-  .feed-group h3 a { font-size:.66rem; letter-spacing:.02em; text-transform:none;
-                     color:var(--dim); font-weight:400; }
-  .feed { list-style:none; margin:0; padding:0; }
-  .feed li { display:grid; grid-template-columns:1fr auto; gap:.15rem 1.4rem;
-             align-items:baseline; padding:.55rem 0; border-bottom:1px solid var(--hair); }
-  .feed li:last-child { border-bottom:0; }
-  .feed .ptitle { font-size:.9rem; line-height:1.45; color:var(--ink); }
-  .feed .ptitle:hover { color:var(--blue-ink); text-decoration:underline; text-underline-offset:2px; }
-  .feed .pmeta { font-family:var(--mono); font-size:.71rem; color:var(--dim); white-space:nowrap; }
-  .feed li:hover .pmeta { color:#3d4550; }
-  .live { display:inline-block; font-family:var(--mono); font-size:.6rem; letter-spacing:.12em;
-          text-transform:uppercase; color:#1a7f37; border:1px solid rgba(26,127,55,.3);
-          background:#eaf6ed; border-radius:999px; padding:.06rem .5rem; margin-left:.5rem;
-          vertical-align:.16em; }
-
-  .links { list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:.5rem 1.6rem;
-           font-family:var(--mono); font-size:.82rem; }
-
-  footer.status { background:var(--dark); color:var(--on-dark-dim); font-family:var(--mono);
-                  font-size:11.5px; display:flex; align-items:center; gap:1rem;
-                  padding:.55rem 1rem; border-top:1px solid var(--dark-rule); }
-  footer.status .branch { color:var(--on-dark); }
-  footer.status .dot { width:7px; height:7px; border-radius:50%; background:#28c840;
-                       display:inline-block; margin-right:.45rem; }
-  footer.status .right { margin-left:auto; display:flex; gap:1rem; }
-
-  @media (max-width:620px) {
-    .hero-in { flex-direction:column; align-items:flex-start; gap:1.2rem; }
-    .photo { width:104px; height:104px; }
-    h1 { font-size:1.9rem; }
-    .file { display:none; }
-    nav.nav { margin-left:0; }
-    .chrome { gap:.6rem; }
-    .feed li { grid-template-columns:1fr; gap:.3rem; }
-    .feed .pmeta { white-space:normal; }
-  }
-</style>
+<link rel="icon" href="/assets/photo.jpg">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
@@ -158,17 +14,16 @@
   <span class="dots"><i></i><i></i><i></i></span>
   <span class="file">salvador-luna<em>.cv.md</em></span>
   <nav class="nav" aria-label="Sections">
-    <a href="#about">about</a>
-    <a href="#games">games</a>
-    <a href="#news">radar</a>
-    <a href="#contact">contact</a>
-    <a class="cv" href="cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV &#8599;</a>
+    <a href="/" class="on" aria-current="page">home</a>
+    <a href="/games/">games</a>
+    <a href="/radar/">radar</a>
+    <a class="cv" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV &#8599;</a>
   </nav>
 </div>
 
 <header class="hero">
   <div class="hero-in">
-    <img class="photo" src="assets/photo.jpg" alt="Salvador Luna Hernández" width="132" height="132">
+    <img class="photo" src="/assets/photo.jpg" alt="Salvador Luna Hernández" width="132" height="132">
     <div>
       <h1>Salvador Luna<em>Hernández</em></h1>
       <p class="tagline">AI Engineer<span>|</span>agentic AI<span>|</span>MCP<span>|</span>LLM engineering</p>
@@ -212,6 +67,27 @@
       <span>Terraform</span>
     </div>
 
+    <div class="entries">
+      <a class="entry" href="/games/">
+        <span class="k">01 — games</span>
+        <h3>QUANTA and the next experiments</h3>
+        <p>Small, self-contained games built with Godot.</p>
+      </a>
+      <a class="entry" href="/radar/">
+        <span class="k">02 — radar</span>
+        <h3>What I'm reading</h3>
+        <p>The newest papers on agentic AI, tool use and RAG.</p>
+      </a>
+      <a class="entry" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">
+        <span class="k">03 — CV</span>
+        <h3>The whole thing, as a PDF</h3>
+        <p>Skills, certifications and the full job history.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="where">
+    <h2>Where I've been</h2>
     <ul class="track">
       <li><span>AI Engineer <span class="co">· AI Center of Excellence · Softtek</span></span><time>2026 — now</time></li>
       <li><span>Data Science Manager <span class="co">· PwC</span></span><time>2025 — 2026</time></li>
@@ -220,53 +96,6 @@
       <li><span>Software Engineer → Architect <span class="co">· CONTPAQi</span></span><time>2015 — 2021</time></li>
       <li><span>Software Engineer <span class="co">· DW Software</span></span><time>2013 — 2015</time></li>
     </ul>
-    <p class="note">Skills, certifications and education are in the <a href="cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV</a>.</p>
-  </section>
-
-  <section id="games">
-    <h2>My games</h2>
-    <a class="game" href="quanta/">
-      <b>QUANTA</b><span class="tag">Android · in testing</span>
-      <p>
-        An endless momentum platformer. You never stop running: dash through hazards,
-        chain combos, and race the same daily track as everyone else. Levels are seeded
-        and the physics are deterministic, so the same seed is the same track for every
-        player.
-      </p>
-    </a>
-    <p class="note">Built with Godot 4.6. More experiments on the way.</p>
-  </section>
-
-  <section id="news">
-    <h2>On my radar<span class="live">auto-refreshed</span></h2>
-    <p class="note">
-      Four topics I follow, four papers each — the newest the arXiv API returned this
-      week. Rebuilt every Monday by a GitHub Action in this repo.
-    </p>
-
-    <div id="papers">
-      <div class="feed-group">
-        <h3><span>Browse on arXiv</span></h3>
-        <ul class="feed">
-          <li>
-            <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=LLM+agents&amp;order=-announced_date_first" target="_blank" rel="noopener">LLM agents &amp; agent architectures</a>
-            <span class="pmeta">newest first</span>
-          </li>
-          <li>
-            <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=model+context+protocol&amp;order=-announced_date_first" target="_blank" rel="noopener">Tool use &amp; MCP</a>
-            <span class="pmeta">newest first</span>
-          </li>
-          <li>
-            <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=retrieval-augmented+generation&amp;order=-announced_date_first" target="_blank" rel="noopener">Retrieval &amp; RAG</a>
-            <span class="pmeta">newest first</span>
-          </li>
-          <li>
-            <a class="ptitle" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">Everything new in cs.AI</a>
-            <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
-          </li>
-        </ul>
-      </div>
-    </div>
   </section>
 
   <section id="contact">
@@ -275,7 +104,7 @@
       <li><a href="mailto:salvadorlunahdz@hotmail.com">salvadorlunahdz@hotmail.com</a></li>
       <li><a href="https://www.linkedin.com/in/salvadorlunahdz/" target="_blank" rel="noopener">linkedin</a></li>
       <li><a href="https://github.com/chavamoon" target="_blank" rel="noopener">github</a></li>
-      <li><a href="cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+      <li><a href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
     </ul>
   </section>
 </main>
@@ -284,77 +113,12 @@
   <span><span class="dot"></span><span class="branch">main</span></span>
   <span>AI Engineer · Guadalajara, MX</span>
   <span class="right">
-    <span><a href="quanta/privacy/" style="color:inherit">privacy</a></span>
-    <span><a href="app-ads.txt" style="color:inherit">app-ads.txt</a></span>
+    <span><a href="/quanta/privacy/" style="color:inherit">privacy</a></span>
+    <span><a href="/app-ads.txt" style="color:inherit">app-ads.txt</a></span>
     <span id="y">2026</span>
   </span>
 </footer>
 
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-
-  // --- arXiv feed (papers.json is rebuilt by .github/workflows/papers.yml) ---
-  (async function () {
-    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => (
-      { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
-    ));
-    const authors = (list) => {
-      if (!list || !list.length) return '';
-      return list.length === 1 ? list[0] : list[0] + ' et al.';
-    };
-    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    const when = (iso) => {
-      const [y, m, d] = String(iso || '').split('-');
-      return (y && m && d) ? `${Number(d)} ${MONTHS[Number(m) - 1]} ${y}` : (iso || '');
-    };
-    const box = document.getElementById('papers');
-    try {
-      const res = await fetch('papers.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
-      if (!data.topics || !data.topics.length) return;
-      box.innerHTML = data.topics.map((t) => `
-        <div class="feed-group">
-          <h3>
-            <span>${esc(t.name)}</span>
-            <a href="https://arxiv.org/search/?searchtype=all&amp;query=${encodeURIComponent(t.name)}&amp;order=-announced_date_first" target="_blank" rel="noopener">more on arXiv &#8599;</a>
-          </h3>
-          <ul class="feed">
-            ${t.papers.map((p) => `
-              <li>
-                <a class="ptitle" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>
-                <span class="pmeta">${esc(when(p.published))} · ${esc(authors(p.authors))}</span>
-              </li>`).join('')}
-          </ul>
-        </div>`).join('') + `
-        <div class="feed-group">
-          <h3><span>Keep browsing</span></h3>
-          <ul class="feed">
-            <li>
-              <a class="ptitle" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">Everything new in cs.AI</a>
-              <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
-            </li>
-            <li>
-              <a class="ptitle" href="https://arxiv.org/list/cs.MA/recent" target="_blank" rel="noopener">Multi-agent systems</a>
-              <span class="pmeta">arxiv.org/list/cs.MA/recent</span>
-            </li>
-          </ul>
-        </div>`;
-    } catch (e) { /* static fallback stays in place */ }
-  })();
-
-  // --- scrollspy for the nav ---
-  (function () {
-    const links = [...document.querySelectorAll('nav.nav a[href^="#"]')];
-    const targets = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-    const set = (id) => links.forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + id));
-    const io = new IntersectionObserver((entries) => {
-      const visible = entries.filter((e) => e.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible) set(visible.target.id);
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    targets.forEach((t) => io.observe(t));
-  })();
-</script>
+<script src="/assets/app.js"></script>
 </body>
 </html>
