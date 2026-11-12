@@ -30,13 +30,7 @@
           "published": "2026-11-10",
           "id": "2611.14493v1",
           "url": "https://arxiv.org/abs/2611.14493v1"
-        }
-      ]
-    },
-    {
-      "name": "Tool use & MCP",
-      "query": "(cat:cs.AI OR cat:cs.CL) AND (abs:\"tool use\" OR abs:\"tool calling\" OR abs:\"model context protocol\")",
-      "papers": [
+        },
         {
           "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
           "authors": [
@@ -55,6 +49,27 @@
           "url": "https://arxiv.org/abs/2611.14492v1"
         },
         {
+          "title": "One Policy for 100 Household Tasks: Our Solution for the 2026 BEHAVIOR Challenge",
+          "authors": [
+            "Ilia Larchenko",
+            "Gleb Zarin",
+            "Atindra Nair",
+            "Keerti Manney",
+            "Vitaly Kleban",
+            "Mirko Kiefer",
+            "Anjana Yodaiken"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.14432v1",
+          "url": "https://arxiv.org/abs/2611.14432v1"
+        }
+      ]
+    },
+    {
+      "name": "Tool use & MCP",
+      "query": "(cat:cs.AI OR cat:cs.CL) AND (abs:\"tool use\" OR abs:\"tool calling\" OR abs:\"model context protocol\")",
+      "papers": [
+        {
           "title": "When Should Agents Remember? Falsification-Gated Self-Evolution for LLM Agents",
           "authors": [
             "Runxuan Tang",
@@ -68,13 +83,7 @@
           "published": "2026-11-10",
           "id": "2611.14326v1",
           "url": "https://arxiv.org/abs/2611.14326v1"
-        }
-      ]
-    },
-    {
-      "name": "Retrieval & RAG",
-      "query": "(cat:cs.CL OR cat:cs.IR) AND (abs:\"retrieval-augmented generation\" OR abs:\"RAG\")",
-      "papers": [
+        },
         {
           "title": "Controlled Knowledge Engineering for Taxonomy Induction with Tool-Grounded LLM Agents and Runtime-Adaptive Policies",
           "authors": [
@@ -88,6 +97,34 @@
           "url": "https://arxiv.org/abs/2611.13966v1"
         },
         {
+          "title": "DrugCoding: A Scientific Programming Agent for Drug Discovery",
+          "authors": [
+            "Junwei Hu",
+            "Zhuohao Lin",
+            "Kun Li",
+            "Hengnan Zhang"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.13651v1",
+          "url": "https://arxiv.org/abs/2611.13651v1"
+        },
+        {
+          "title": "Agent-Guided Discovery of Exchange-Correlation Functionals with Physics-based Validation",
+          "authors": [
+            "Achuth Chandrasekhar",
+            "Amir Barati Farimani"
+          ],
+          "published": "2026-11-09",
+          "id": "2611.13329v1",
+          "url": "https://arxiv.org/abs/2611.13329v1"
+        }
+      ]
+    },
+    {
+      "name": "Retrieval & RAG",
+      "query": "(cat:cs.CL OR cat:cs.IR) AND (abs:\"retrieval-augmented generation\" OR abs:\"RAG\")",
+      "papers": [
+        {
           "title": "OpticalRAG: Pixel-Space Compression for Token-Efficient Retrieval-Augmented Generation",
           "authors": [
             "Senhao Liu",
@@ -99,6 +136,40 @@
           "published": "2026-11-10",
           "id": "2611.13675v1",
           "url": "https://arxiv.org/abs/2611.13675v1"
+        },
+        {
+          "title": "BharatSynthQA: A Context-Grounded Question Answering Dataset on Indian Temples and Religious Heritage",
+          "authors": [
+            "Riya Naik",
+            "Shivam Sharma",
+            "Swati Agarwal"
+          ],
+          "published": "2026-11-09",
+          "id": "2611.11952v1",
+          "url": "https://arxiv.org/abs/2611.11952v1"
+        },
+        {
+          "title": "AOP-Smart-Finder: A High-Throughput Human-AI Hybrid Framework for AOP Discovery and Evidence Mapping from Large-Scale Literature",
+          "authors": [
+            "Qinjiang Niu",
+            "Lu Yan"
+          ],
+          "published": "2026-11-08",
+          "id": "2611.11349v1",
+          "url": "https://arxiv.org/abs/2611.11349v1"
+        },
+        {
+          "title": "PCG-RAG: Progressive Compositional Grounding for Retrieval-Augmented Generation in Complex Web Question Answering",
+          "authors": [
+            "Linyao Zheng",
+            "Xuhang Shi",
+            "Zhifang Mao",
+            "Chongqi Qu",
+            "Xiuquan Hou"
+          ],
+          "published": "2026-11-08",
+          "id": "2611.11113v1",
+          "url": "https://arxiv.org/abs/2611.11113v1"
         }
       ]
     },
@@ -126,6 +197,33 @@
           "published": "2026-11-10",
           "id": "2611.14059v1",
           "url": "https://arxiv.org/abs/2611.14059v1"
+        },
+        {
+          "title": "From Attack Surface to Defense Architecture: Compositional Security for Agentic Coding Harnesses",
+          "authors": [
+            "Simon Hegelich",
+            "Bardh Prenkaj",
+            "Habiba Sarhan",
+            "Morteza Shahrezaye",
+            "Kolja Hegelich",
+            "Christian Montag",
+            "Ralf Schneider",
+            "Erik Cambria"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.13960v1",
+          "url": "https://arxiv.org/abs/2611.13960v1"
+        },
+        {
+          "title": "Taxonomy-Agnostic Neurosymbolic Grounding of Robot Kinematics",
+          "authors": [
+            "Bastien Dussard",
+            "Aur{é}lie Clodic",
+            "Guillaume Sarthou"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.13850v1",
+          "url": "https://arxiv.org/abs/2611.13850v1"
         }
       ]
     }

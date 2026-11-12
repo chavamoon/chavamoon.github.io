@@ -39,7 +39,7 @@ TOPICS = [
     },
 ]
 
-PER_TOPIC = 2
+PER_TOPIC = 4
 
 
 def fetch(topic_query: str, limit: int) -> list[dict]:

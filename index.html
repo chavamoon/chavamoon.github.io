@@ -109,18 +109,21 @@
          background:#fff8c5; border-radius:999px; padding:.05rem .5rem; margin-left:.5rem;
          vertical-align:.15em; }
 
-  .papers { display:grid; gap:.9rem; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));
-            margin:0 0 1rem; }
-  .topic { background:#fff; border:1px solid var(--rule); border-radius:10px; padding:.95rem 1.05rem 1rem; }
-  .topic h3 { font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase;
-              color:var(--blue); margin:0 0 .4rem; font-weight:700; }
-  .paper { display:block; padding:.55rem 0; border-bottom:1px solid var(--hair); color:inherit; }
-  .paper:last-child { border-bottom:0; padding-bottom:0; }
-  .paper:hover { text-decoration:none; }
-  .paper:hover .ptitle { color:var(--blue-ink); text-decoration:underline; text-underline-offset:2px; }
-  .ptitle { display:block; font-size:.89rem; line-height:1.45; color:var(--ink); }
-  .pmeta { display:block; font-family:var(--mono); color:var(--dim); font-size:.72rem;
-           margin-top:.28rem; letter-spacing:.01em; }
+  .feed-group { border-top:1px solid var(--rule); padding-top:1.1rem; margin-top:1.4rem; }
+  .feed-group:first-child { border-top:0; padding-top:0; margin-top:.6rem; }
+  .feed-group h3 { display:flex; align-items:baseline; justify-content:space-between; gap:1rem;
+                   margin:0 0 .25rem; font-family:var(--mono); font-size:.7rem;
+                   letter-spacing:.14em; text-transform:uppercase; color:var(--blue); font-weight:700; }
+  .feed-group h3 a { font-size:.66rem; letter-spacing:.02em; text-transform:none;
+                     color:var(--dim); font-weight:400; }
+  .feed { list-style:none; margin:0; padding:0; }
+  .feed li { display:grid; grid-template-columns:1fr auto; gap:.15rem 1.4rem;
+             align-items:baseline; padding:.55rem 0; border-bottom:1px solid var(--hair); }
+  .feed li:last-child { border-bottom:0; }
+  .feed .ptitle { font-size:.9rem; line-height:1.45; color:var(--ink); }
+  .feed .ptitle:hover { color:var(--blue-ink); text-decoration:underline; text-underline-offset:2px; }
+  .feed .pmeta { font-family:var(--mono); font-size:.71rem; color:var(--dim); white-space:nowrap; }
+  .feed li:hover .pmeta { color:#3d4550; }
   .live { display:inline-block; font-family:var(--mono); font-size:.6rem; letter-spacing:.12em;
           text-transform:uppercase; color:#1a7f37; border:1px solid rgba(26,127,55,.3);
           background:#eaf6ed; border-radius:999px; padding:.06rem .5rem; margin-left:.5rem;
@@ -144,6 +147,8 @@
     .file { display:none; }
     nav.nav { margin-left:0; }
     .chrome { gap:.6rem; }
+    .feed li { grid-template-columns:1fr; gap:.3rem; }
+    .feed .pmeta { white-space:normal; }
   }
 </style>
 </head>
@@ -155,7 +160,7 @@
   <nav class="nav" aria-label="Sections">
     <a href="#about">about</a>
     <a href="#games">games</a>
-    <a href="#news">ai news</a>
+    <a href="#news">radar</a>
     <a href="#contact">contact</a>
     <a class="cv" href="cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV &#8599;</a>
   </nav>
@@ -191,8 +196,8 @@
     <p class="lead">
       I build AI systems that do real work — agentic architectures, MCP tool contracts and
       LLM workflows that hold up in production. I started as a software developer, moved
-      into data science, and today I lead the agentic track at Softtek's AI Center of
-      Excellence.
+      into data science, and these days what I enjoy most is building agents that can
+      actually do the job.
     </p>
     <p>
       Outside of that I build small games with Godot: the kind of software where you can
@@ -233,31 +238,33 @@
   </section>
 
   <section id="news">
-    <h2>News on AI<span class="live">auto-refreshed</span></h2>
+    <h2>On my radar<span class="live">auto-refreshed</span></h2>
     <p class="note">
-      The newest papers for the topics I work in, pulled straight from the arXiv API and
-      regenerated every week by a GitHub Action in this repo.
+      Four topics I follow, four papers each — the newest the arXiv API returned this
+      week. Rebuilt every Monday by a GitHub Action in this repo.
     </p>
 
-    <div class="papers" id="papers">
-      <div class="topic">
-        <h3>Browse on arXiv</h3>
-        <a class="paper" href="https://arxiv.org/search/?searchtype=all&amp;query=LLM+agents&amp;order=-announced_date_first" target="_blank" rel="noopener">
-          <span class="ptitle">LLM agents &amp; agent architectures</span>
-          <span class="pmeta">newest first</span>
-        </a>
-        <a class="paper" href="https://arxiv.org/search/?searchtype=all&amp;query=model+context+protocol&amp;order=-announced_date_first" target="_blank" rel="noopener">
-          <span class="ptitle">Tool use &amp; MCP</span>
-          <span class="pmeta">newest first</span>
-        </a>
-        <a class="paper" href="https://arxiv.org/search/?searchtype=all&amp;query=retrieval-augmented+generation&amp;order=-announced_date_first" target="_blank" rel="noopener">
-          <span class="ptitle">Retrieval &amp; RAG</span>
-          <span class="pmeta">newest first</span>
-        </a>
-        <a class="paper" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">
-          <span class="ptitle">Everything new in cs.AI</span>
-          <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
-        </a>
+    <div id="papers">
+      <div class="feed-group">
+        <h3><span>Browse on arXiv</span></h3>
+        <ul class="feed">
+          <li>
+            <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=LLM+agents&amp;order=-announced_date_first" target="_blank" rel="noopener">LLM agents &amp; agent architectures</a>
+            <span class="pmeta">newest first</span>
+          </li>
+          <li>
+            <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=model+context+protocol&amp;order=-announced_date_first" target="_blank" rel="noopener">Tool use &amp; MCP</a>
+            <span class="pmeta">newest first</span>
+          </li>
+          <li>
+            <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=retrieval-augmented+generation&amp;order=-announced_date_first" target="_blank" rel="noopener">Retrieval &amp; RAG</a>
+            <span class="pmeta">newest first</span>
+          </li>
+          <li>
+            <a class="ptitle" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">Everything new in cs.AI</a>
+            <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -293,7 +300,12 @@
     ));
     const authors = (list) => {
       if (!list || !list.length) return '';
-      return list.length <= 2 ? list.join(', ') : list[0] + ' et al.';
+      return list.length === 1 ? list[0] : list[0] + ' et al.';
+    };
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const when = (iso) => {
+      const [y, m, d] = String(iso || '').split('-');
+      return (y && m && d) ? `${Number(d)} ${MONTHS[Number(m) - 1]} ${y}` : (iso || '');
     };
     const box = document.getElementById('papers');
     try {
@@ -302,24 +314,31 @@
       const data = await res.json();
       if (!data.topics || !data.topics.length) return;
       box.innerHTML = data.topics.map((t) => `
-        <div class="topic">
-          <h3>${esc(t.name)}</h3>
-          ${t.papers.map((p) => `
-            <a class="paper" href="${esc(p.url)}" target="_blank" rel="noopener">
-              <span class="ptitle">${esc(p.title)}</span>
-              <span class="pmeta">${esc(p.published)} · ${esc(authors(p.authors))}</span>
-            </a>`).join('')}
+        <div class="feed-group">
+          <h3>
+            <span>${esc(t.name)}</span>
+            <a href="https://arxiv.org/search/?searchtype=all&amp;query=${encodeURIComponent(t.name)}&amp;order=-announced_date_first" target="_blank" rel="noopener">more on arXiv &#8599;</a>
+          </h3>
+          <ul class="feed">
+            ${t.papers.map((p) => `
+              <li>
+                <a class="ptitle" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>
+                <span class="pmeta">${esc(when(p.published))} · ${esc(authors(p.authors))}</span>
+              </li>`).join('')}
+          </ul>
         </div>`).join('') + `
-        <div class="topic">
-          <h3>Keep browsing</h3>
-          <a class="paper" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">
-            <span class="ptitle">Everything new in cs.AI</span>
-            <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
-          </a>
-          <a class="paper" href="https://arxiv.org/list/cs.MA/recent" target="_blank" rel="noopener">
-            <span class="ptitle">Multi-agent systems</span>
-            <span class="pmeta">arxiv.org/list/cs.MA/recent</span>
-          </a>
+        <div class="feed-group">
+          <h3><span>Keep browsing</span></h3>
+          <ul class="feed">
+            <li>
+              <a class="ptitle" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">Everything new in cs.AI</a>
+              <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
+            </li>
+            <li>
+              <a class="ptitle" href="https://arxiv.org/list/cs.MA/recent" target="_blank" rel="noopener">Multi-agent systems</a>
+              <span class="pmeta">arxiv.org/list/cs.MA/recent</span>
+            </li>
+          </ul>
         </div>`;
     } catch (e) { /* static fallback stays in place */ }
   })();
