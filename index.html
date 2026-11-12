@@ -16,8 +16,14 @@
              text-transform:uppercase; margin:0 0 .9rem; }
   h1 { font-size:2.1rem; letter-spacing:.02em; margin:0 0 .4rem; color:var(--action);
        text-shadow:0 0 26px rgba(73,224,255,.3); }
-  .role { font-size:1.05rem; margin:0 0 2.4rem; }
+  .role { font-size:1.05rem; margin:0 0 1.15rem; }
   .role span { color:var(--dim); }
+  .cv { margin:0 0 2.4rem; }
+  .cv a { display:inline-flex; align-items:center; gap:.6rem; font-size:.8rem;
+          letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(73,224,255,.45);
+          border-radius:999px; padding:.4rem .95rem .38rem; transition:background .15s, border-color .15s; }
+  .cv a:hover { background:rgba(73,224,255,.09); border-color:var(--action); border-bottom-color:var(--action); }
+  .cv a small { color:var(--dim); letter-spacing:.08em; font-size:.72rem; }
   h2 { font-size:.9rem; letter-spacing:.16em; text-transform:uppercase; color:var(--action);
        margin:2.9rem 0 .8rem; }
   p { margin:0 0 1rem; }
@@ -44,6 +50,10 @@
   <p class="eyebrow">chavamoon</p>
   <h1>Salvador Luna</h1>
   <p class="role">Data scientist <span>·</span> AI engineer <span>·</span> game developer</p>
+
+  <p class="cv">
+    <a href="cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">Download CV <small>PDF</small></a>
+  </p>
 
   <p>
     I work where data meets models: machine learning, analytics, and the pipelines
