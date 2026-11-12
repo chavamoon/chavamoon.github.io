@@ -1,0 +1,65 @@
+{
+  "generated": "2026-11-12",
+  "items": [
+    {
+      "title": "Holiday Extras is rethinking what it can build with Codex",
+      "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+      "source": "OpenAI",
+      "published": "2026-11-12"
+    },
+    {
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+      "source": "Google AI",
+      "published": "2026-11-12"
+    },
+    {
+      "title": "Introducing Gemini 4 Hydrogen",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "source": "DeepMind",
+      "published": "2026-11-12"
+    },
+    {
+      "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+      "source": "Hugging Face",
+      "published": "2026-11-12"
+    },
+    {
+      "title": "Google’s latest Search upgrade promises better answers to your most complicated questions",
+      "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
+      "source": "TechCrunch AI",
+      "published": "2026-11-12"
+    },
+    {
+      "title": "Supporting research on AI and children’s safety",
+      "url": "https://openai.com/index/children-first-declaration",
+      "source": "OpenAI",
+      "published": "2026-11-12"
+    },
+    {
+      "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
+      "url": "https://huggingface.co/blog/3d-lora-finetuning",
+      "source": "Hugging Face",
+      "published": "2026-11-12"
+    },
+    {
+      "title": "Nectar launches an AI agent to automate creator discovery and outreach for brands",
+      "url": "https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/",
+      "source": "TechCrunch AI",
+      "published": "2026-11-12"
+    },
+    {
+      "title": "Gemini Decisions API",
+      "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
+      "source": "Simon Willison",
+      "published": "2026-11-11"
+    },
+    {
+      "title": "From Full to Hybrid Attention in LLMs",
+      "url": "https://sebastianraschka.com/blog/2026/full-to-hybrid-attention.html",
+      "source": "Sebastian Raschka",
+      "published": "2026-11-10"
+    }
+  ]
+}

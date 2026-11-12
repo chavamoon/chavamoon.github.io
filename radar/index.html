@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Radar — Salvador Luna</title>
-<meta name="description" content="The newest arXiv papers on agent architectures, tool use and MCP, retrieval-augmented generation, and evaluation, refreshed weekly.">
+<meta name="description" content="What I'm reading: the newest AI headlines and the newest arXiv papers on agent architectures, tool use and MCP, retrieval, and evaluation.">
 <link rel="icon" href="/assets/photo.jpg">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
@@ -26,40 +26,70 @@
     <img class="avatar" src="/assets/photo.jpg" alt="" width="52" height="52">
     <div>
       <p class="crumb"><a href="/">Salvador Luna</a> / <b>radar</b></p>
-      <p class="page-sub">The newest papers on the topics I work in.</p>
+      <p class="page-sub">What's new in AI, and what I'm actually reading.</p>
     </div>
   </div>
 </header>
 
 <main>
   <section>
-    <h2>On my radar<span class="live">auto-refreshed</span></h2>
-    <p class="note">
-      Four topics I follow, four papers each — the newest the arXiv API returned this
-      week. Rebuilt every Monday by a GitHub Action in this repo.
-    </p>
+    <div class="radar-bar">
+      <div class="tabs" role="tablist" aria-label="Radar">
+        <button class="tab on" id="tab-news" role="tab" data-panel="news"
+                aria-controls="panel-news" aria-selected="true">news</button>
+        <button class="tab" id="tab-papers" role="tab" data-panel="papers"
+                aria-controls="panel-papers" aria-selected="false">papers</button>
+      </div>
+      <span class="live">auto-refreshed</span>
+    </div>
 
-    <div id="papers">
-      <div class="feed-group">
-        <h3><span>Browse on arXiv</span></h3>
+    <div class="panel" id="panel-news" role="tabpanel" aria-labelledby="tab-news">
+      <p class="note">
+        Headlines from OpenAI, Google AI, DeepMind, Hugging Face, TechCrunch,
+        Simon Willison and Sebastian Raschka. Newest first.
+      </p>
+
+      <div id="news">
         <ul class="feed">
-          <li>
-            <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=LLM+agents&amp;order=-announced_date_first" target="_blank" rel="noopener">LLM agents &amp; agent architectures</a>
-            <span class="pmeta">newest first</span>
-          </li>
-          <li>
-            <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=model+context+protocol&amp;order=-announced_date_first" target="_blank" rel="noopener">Tool use &amp; MCP</a>
-            <span class="pmeta">newest first</span>
-          </li>
-          <li>
-            <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=retrieval-augmented+generation&amp;order=-announced_date_first" target="_blank" rel="noopener">Retrieval &amp; RAG</a>
-            <span class="pmeta">newest first</span>
-          </li>
-          <li>
-            <a class="ptitle" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">Everything new in cs.AI</a>
-            <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
-          </li>
+          <li><a class="ptitle" href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI</a><span class="pmeta">news</span></li>
+          <li><a class="ptitle" href="https://blog.google/technology/ai/" target="_blank" rel="noopener">Google AI</a><span class="pmeta">blog</span></li>
+          <li><a class="ptitle" href="https://deepmind.google/discover/blog/" target="_blank" rel="noopener">DeepMind</a><span class="pmeta">blog</span></li>
+          <li><a class="ptitle" href="https://huggingface.co/blog" target="_blank" rel="noopener">Hugging Face</a><span class="pmeta">blog</span></li>
+          <li><a class="ptitle" href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" rel="noopener">TechCrunch AI</a><span class="pmeta">news</span></li>
+          <li><a class="ptitle" href="https://simonwillison.net/" target="_blank" rel="noopener">Simon Willison</a><span class="pmeta">blog</span></li>
+          <li><a class="ptitle" href="https://sebastianraschka.com/blog/" target="_blank" rel="noopener">Sebastian Raschka</a><span class="pmeta">blog</span></li>
         </ul>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-papers" role="tabpanel" aria-labelledby="tab-papers">
+      <p class="note">
+        Four topics I follow, four papers each — the newest the arXiv API returned
+        this week.
+      </p>
+
+      <div id="papers">
+        <div class="feed-group">
+          <h3><span>Browse on arXiv</span></h3>
+          <ul class="feed">
+            <li>
+              <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=LLM+agents&amp;order=-announced_date_first" target="_blank" rel="noopener">LLM agents &amp; agent architectures</a>
+              <span class="pmeta">newest first</span>
+            </li>
+            <li>
+              <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=model+context+protocol&amp;order=-announced_date_first" target="_blank" rel="noopener">Tool use &amp; MCP</a>
+              <span class="pmeta">newest first</span>
+            </li>
+            <li>
+              <a class="ptitle" href="https://arxiv.org/search/?searchtype=all&amp;query=retrieval-augmented+generation&amp;order=-announced_date_first" target="_blank" rel="noopener">Retrieval &amp; RAG</a>
+              <span class="pmeta">newest first</span>
+            </li>
+            <li>
+              <a class="ptitle" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">Everything new in cs.AI</a>
+              <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
