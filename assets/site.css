@@ -89,7 +89,7 @@ h2 { font-family:var(--mono); font-size:.78rem; font-weight:700; letter-spacing:
      align-items:center; gap:.55rem; }
 h2::before { content:"//"; color:#9aa4af; font-weight:400; }
 h2::after { content:""; flex:1; height:1px; background:var(--rule); }
-p { margin:0 0 1rem; max-width:64ch; }
+p { margin:0 0 1rem; }
 .lead { font-size:1.06rem; }
 .note { color:var(--dim); font-size:.86rem; }
 
@@ -97,13 +97,6 @@ p { margin:0 0 1rem; max-width:64ch; }
 .chips span { font-family:var(--mono); font-size:.74rem; letter-spacing:.02em;
               color:var(--blue-ink); background:#fff; border:1px solid var(--chip);
               border-radius:5px; padding:.16rem .5rem; }
-
-.track { list-style:none; margin:0 0 1rem; padding:0; }
-.track li { display:flex; align-items:baseline; justify-content:space-between; gap:1rem;
-            padding:.5rem 0; border-bottom:1px solid var(--hair); font-size:.94rem; }
-.track li:last-child { border-bottom:0; }
-.track .co { color:var(--dim); }
-.track time { font-family:var(--mono); font-size:.74rem; color:var(--dim); white-space:nowrap; }
 
 /* ---------- entry cards ---------- */
 .entries { display:grid; gap:.8rem; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); }
