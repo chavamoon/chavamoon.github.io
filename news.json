@@ -44,12 +44,6 @@
       "published": "2026-11-12"
     },
     {
-      "title": "Nectar launches an AI agent to automate creator discovery and outreach for brands",
-      "url": "https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/",
-      "source": "TechCrunch AI",
-      "published": "2026-11-12"
-    },
-    {
       "title": "Gemini Decisions API",
       "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
       "source": "Simon Willison",
@@ -60,6 +54,12 @@
       "url": "https://sebastianraschka.com/blog/2026/full-to-hybrid-attention.html",
       "source": "Sebastian Raschka",
       "published": "2026-11-10"
+    },
+    {
+      "title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "source": "Anthropic",
+      "published": "2026-11-09"
     }
   ]
 }

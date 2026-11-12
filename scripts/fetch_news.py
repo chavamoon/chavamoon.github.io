@@ -6,9 +6,12 @@ safe to run by hand:
 
     python scripts/fetch_news.py
 
-No third-party dependencies: urllib + xml.etree.
+Anthropic has no RSS feed, so its news index is scraped instead.
+
+No third-party dependencies: urllib + xml.etree + re.
 """
 
+import html
 import json
 import re
 import time
@@ -17,6 +20,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from urllib.parse import urljoin
 
 FEEDS = [
     ("OpenAI", "https://openai.com/news/rss.xml"),
@@ -62,10 +66,14 @@ def parse_date(raw: str) -> str:
         return ""
 
 
-def fetch(source: str, url: str) -> list[dict]:
+def read(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=25) as resp:
-        root = ET.fromstring(resp.read())
+        return resp.read()
+
+
+def fetch(source: str, url: str) -> list[dict]:
+    root = ET.fromstring(read(url))
 
     nodes = root.findall(".//item")
     if not nodes:
@@ -92,6 +100,59 @@ def fetch(source: str, url: str) -> list[dict]:
     return out
 
 
+def fetch_anthropic() -> list[dict]:
+    """Scrape anthropic.com/news: it has no RSS, but the index markup is stable.
+
+    Each <article> holds a category link, a <time> and one anchor wrapping the
+    headline. The headline anchor is the last href before the headline text, so a
+    post URL can be /news/... or a bare slug like /claude-opus-5-5.
+    """
+    page = read("https://www.anthropic.com/news").decode("utf-8", "replace")
+    out = []
+    for block in page.split('<article class="W1FydW_')[1:]:
+        headline = re.search(
+            r'data-component="Headline"[^>]*>(.*?)</h[23]>', block, re.S
+        )
+        if not headline:
+            continue
+        pos = headline.start()
+
+        anchor = None
+        for match in re.finditer(r'<a\b[^>]*href="([^"]+)"', block):
+            if match.start() >= pos:
+                break
+            anchor = match
+        stamp = None
+        for match in re.finditer(r"<time>([^<]+)</time>", block):
+            if match.start() >= pos:
+                break
+            stamp = match
+        if not (anchor and stamp):
+            continue
+
+        title = html.unescape(re.sub(r"<[^>]+>", "", headline.group(1))).strip()
+        title = " ".join(title.split())
+        try:
+            published = datetime.strptime(
+                stamp.group(1).strip(), "%b %d, %Y"
+            ).date().isoformat()
+        except ValueError:
+            published = ""
+        if not title:
+            continue
+        out.append(
+            {
+                "title": title,
+                "url": urljoin("https://www.anthropic.com/news", anchor.group(1)),
+                "source": "Anthropic",
+                "published": published,
+            }
+        )
+        if len(out) == PER_SOURCE:
+            break
+    return out
+
+
 def main() -> None:
     items: list[dict] = []
     for i, (source, url) in enumerate(FEEDS):
@@ -104,6 +165,13 @@ def main() -> None:
             continue
         items.extend(got)
         print(f"{source}: {len(got)} items")
+
+    try:
+        got = fetch_anthropic()
+        items.extend(got)
+        print(f"Anthropic: {len(got)} items")
+    except Exception as exc:
+        print(f"skip Anthropic: {exc}")
 
     if not items:
         raise SystemExit("no feeds fetched")
