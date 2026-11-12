@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Salvador Luna — Data Scientist, AI Engineer &amp; Game Developer</title>
-<meta name="description" content="Salvador Luna (chavamoon) — data scientist, AI engineer and game developer. Maker of QUANTA, an endless momentum platformer for Android.">
+<title>Salvador Luna — AI Engineer, agentic systems &amp; game developer</title>
+<meta name="description" content="Salvador Luna (chavamoon) — AI engineer working on agentic systems, MCP tooling and ontology engineering. Maker of QUANTA, an endless momentum platformer for Android.">
 <style>
   :root { --ink:#05070e; --far:#101c33; --action:#49e0ff; --gold:#ffd166; --text:#e6f1ff; --dim:#8ea3c4; }
   * { box-sizing: border-box; }
@@ -41,30 +41,59 @@
   .tag { display:inline-block; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
          color:var(--gold); border:1px solid rgba(255,209,102,.35); border-radius:999px;
          padding:.1rem .55rem; margin-left:.5rem; vertical-align:.14em; }
+  .note { color:var(--dim); font-size:.86rem; margin-bottom:1rem; }
+  .now { list-style:none; padding:0; margin:0 0 1rem; }
+  .now li { display:grid; grid-template-columns:1fr auto; gap:0 1.2rem;
+            padding:.6rem 0; border-bottom:1px solid rgba(142,163,196,.13); margin:0; }
+  .now li:last-child { border-bottom:0; }
+  .now .co { display:block; color:var(--dim); font-size:.82rem; letter-spacing:.02em; }
+  .now time { color:var(--dim); font-size:.78rem; white-space:nowrap; text-align:right;
+              padding-top:.15rem; }
+  .papers { display:grid; gap:.9rem; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));
+            margin:1rem 0 0; }
+  .topic { background:var(--far); border:1px solid rgba(73,224,255,.18); border-radius:12px;
+           padding:1rem 1.1rem 1.1rem; }
+  .topic h3 { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+              color:var(--action); margin:0 0 .55rem; font-weight:600; }
+  .paper { display:block; padding:.55rem 0; border:0; border-bottom:1px solid rgba(142,163,196,.14); }
+  .paper:last-child { border-bottom:0; padding-bottom:0; }
+  .paper:hover .ptitle { color:var(--action); }
+  .ptitle { display:block; font-size:.88rem; line-height:1.45; color:var(--text); }
+  .pmeta { display:block; color:var(--dim); font-size:.72rem; margin-top:.3rem; letter-spacing:.03em; }
+  .live { display:inline-block; font-size:.6rem; letter-spacing:.14em; text-transform:uppercase;
+          color:var(--gold); border:1px solid rgba(255,209,102,.35); border-radius:999px;
+          padding:.08rem .5rem; margin-left:.55rem; vertical-align:.16em; }
   footer { margin-top:3.5rem; padding-top:1.2rem; border-top:1px solid rgba(142,163,196,.22);
            color:var(--dim); font-size:.82rem; }
+  @media (max-width:34rem) {
+    .now li { grid-template-columns:1fr; }
+    .now time { text-align:left; padding-top:0; }
+  }
 </style>
 </head>
 <body>
 <main>
   <p class="eyebrow">chavamoon</p>
   <h1>Salvador Luna</h1>
-  <p class="role">Data scientist <span>·</span> AI engineer <span>·</span> game developer</p>
+  <p class="role">AI engineer <span>·</span> agentic systems <span>·</span> game developer</p>
 
   <p class="cv">
     <a href="cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">Download CV <small>PDF</small></a>
   </p>
 
   <p>
-    I work where data meets models: machine learning, analytics, and the pipelines
-    that make both of them trustworthy. Lately much of that work is agentic —
-    systems where agents plan, call tools and hand work off to each other. Outside
-    of that I build small games, mostly to keep my hands on the part of software
-    where you can feel the result right away.
+    I build AI systems that do real work. I started as a software developer, moved
+    into data science, and today I design multi-agent architectures, tool contracts
+    over MCP and LLM workflows that run in production — the unglamorous part where a
+    model has to be grounded, observable and cheap enough to survive a Monday.
   </p>
   <p>
-    This site is my corner of the internet — a home for the games I release and
-    for the few documents a published app needs to exist.
+    At Softtek's AI Center of Excellence I lead the agentic track: the reference
+    agent architecture reused across client engagements, MCP servers that expose
+    enterprise systems as governed tools, and pipelines that turn unstructured
+    documents into ontologies and decision models so agents reason over business
+    rules instead of raw text. Outside of that I build small games, mostly to keep
+    my hands on the part of software where you can feel the result right away.
   </p>
 
   <h2>My games</h2>
@@ -74,33 +103,147 @@
     <p>
       An endless momentum platformer. You never stop running: dash through
       hazards, chain combos, and race the same daily track as everyone else.
+      Levels are seeded and the physics are deterministic, so the same seed is the
+      same track for every player.
     </p>
   </a>
+  <p class="note">
+    Built with Godot 4.6. More experiments on the way — the small ones end up here
+    first.
+  </p>
 
   <h2>What I do</h2>
   <ul>
-    <li><strong>Data science</strong> — models, experiments and analysis that
-      people can actually act on.</li>
-    <li><strong>AI engineering</strong> — agentic solutions: different agent
-      patterns and architectures, wired to real tools and data.</li>
+    <li><strong>Agentic AI</strong> — agent architectures and patterns: planners,
+      subagents, hand-offs, interrupt/resume, and the observability that tells you
+      which of them actually worked.</li>
+    <li><strong>Tool contracts</strong> — MCP servers that expose enterprise
+      systems to agents with permissions, limits and a stable interface.</li>
+    <li><strong>Ontology &amp; decision models</strong> — codifying domain knowledge
+      from documents so agents reason over business rules, not raw text.</li>
+    <li><strong>Data science</strong> — models, experiments and analysis that people
+      can actually act on.</li>
     <li><strong>Data engineering</strong> — pipelines and tooling that keep the
       numbers honest.</li>
     <li><strong>Game development</strong> — small, self-contained projects built
       with Godot.</li>
   </ul>
 
+  <h2>Where I've been</h2>
+  <ul class="now">
+    <li>
+      <span>AI Engineer <span class="co">AI Center of Excellence · Softtek</span></span>
+      <time>2026 — now</time>
+    </li>
+    <li>
+      <span>Data Science Manager, AI Engineering <span class="co">PwC</span></span>
+      <time>2025 — 2026</time>
+    </li>
+    <li>
+      <span>Senior Associate Data Scientist, Innovation Hub <span class="co">PwC</span></span>
+      <time>2023 — 2025</time>
+    </li>
+    <li>
+      <span>Data Science &amp; Data Engineering <span class="co">CONTPAQi</span></span>
+      <time>2021 — 2023</time>
+    </li>
+    <li>
+      <span>Software Engineer → Software Architect <span class="co">CONTPAQi</span></span>
+      <time>2015 — 2021</time>
+    </li>
+    <li>
+      <span>Software Engineer <span class="co">DW Software</span></span>
+      <time>2013 — 2015</time>
+    </li>
+  </ul>
+  <p class="note">The full detail — skills, certifications, education — is in the CV.</p>
+
+  <h2>On arXiv<span class="live">auto-refreshed</span></h2>
+  <p class="note">
+    The newest papers for the topics I work in. Pulled straight from the arXiv API
+    and regenerated every week by a GitHub Action in this repo.
+  </p>
+
+  <div class="papers" id="papers">
+    <div class="topic">
+      <h3>Browse on arXiv</h3>
+      <a class="paper" href="https://arxiv.org/search/?searchtype=all&amp;query=LLM+agents&amp;order=-announced_date_first" target="_blank" rel="noopener">
+        <span class="ptitle">LLM agents &amp; agent architectures</span>
+        <span class="pmeta">newest first</span>
+      </a>
+      <a class="paper" href="https://arxiv.org/search/?searchtype=all&amp;query=model+context+protocol&amp;order=-announced_date_first" target="_blank" rel="noopener">
+        <span class="ptitle">Tool use &amp; MCP</span>
+        <span class="pmeta">newest first</span>
+      </a>
+      <a class="paper" href="https://arxiv.org/search/?searchtype=all&amp;query=retrieval-augmented+generation&amp;order=-announced_date_first" target="_blank" rel="noopener">
+        <span class="ptitle">Retrieval &amp; RAG</span>
+        <span class="pmeta">newest first</span>
+      </a>
+      <a class="paper" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">
+        <span class="ptitle">Everything new in cs.AI</span>
+        <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
+      </a>
+    </div>
+  </div>
+
   <h2>Contact</h2>
   <p>
     <a href="https://github.com/chavamoon">github.com/chavamoon</a><br>
+    <a href="https://www.linkedin.com/in/salvadorlunahdz/">linkedin.com/in/salvadorlunahdz</a><br>
     <a href="mailto:salvadorlunahdz@hotmail.com">salvadorlunahdz@hotmail.com</a>
   </p>
 
   <footer>
     <a href="quanta/privacy/">Privacy policy</a> ·
-    <a href="app-ads.txt">app-ads.txt</a><br>
+    <a href="app-ads.txt">app-ads.txt</a> ·
+    <a href="cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV</a><br>
     Salvador Luna · Godot Engine · <span id="y">2026</span>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
 </main>
+<script>
+  // The arXiv API does not send CORS headers, so papers.json is rebuilt by a
+  // GitHub Action and served from this same origin. If the fetch fails the
+  // static links above stay in place.
+  (async function () {
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => (
+      { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+    ));
+    const authors = (list) => {
+      if (!list || !list.length) return '';
+      if (list.length <= 2) return list.join(', ');
+      return list[0] + ' et al.';
+    };
+    const box = document.getElementById('papers');
+    try {
+      const res = await fetch('papers.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      if (!data.topics || !data.topics.length) return;
+      box.innerHTML = data.topics.map((t) => `
+        <div class="topic">
+          <h3>${esc(t.name)}</h3>
+          ${t.papers.map((p) => `
+            <a class="paper" href="${esc(p.url)}" target="_blank" rel="noopener">
+              <span class="ptitle">${esc(p.title)}</span>
+              <span class="pmeta">${esc(p.published)} · ${esc(authors(p.authors))}</span>
+            </a>`).join('')}
+        </div>`).join('') + `
+        <div class="topic">
+          <h3>Keep browsing</h3>
+          <a class="paper" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">
+            <span class="ptitle">Everything new in cs.AI</span>
+            <span class="pmeta">arxiv.org/list/cs.AI/recent</span>
+          </a>
+          <a class="paper" href="https://arxiv.org/list/cs.MA/recent" target="_blank" rel="noopener">
+            <span class="ptitle">Multi-agent systems</span>
+            <span class="pmeta">arxiv.org/list/cs.MA/recent</span>
+          </a>
+        </div>`;
+    } catch (e) {
+      // leave the static fallback links untouched
+    }
+  })();
+</script>
 </body>
 </html>

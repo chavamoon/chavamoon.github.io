@@ -1,0 +1,133 @@
+{
+  "generated": "2026-11-12",
+  "topics": [
+    {
+      "name": "Agent architectures",
+      "query": "(cat:cs.MA OR cat:cs.AI) AND (abs:\"LLM agents\" OR abs:\"agent architecture\" OR abs:\"agentic\")",
+      "papers": [
+        {
+          "title": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
+          "authors": [
+            "Ziang Liu",
+            "James J. Kim",
+            "Yijia Dai",
+            "Jennifer J. Sun"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.14514v1",
+          "url": "https://arxiv.org/abs/2611.14514v1"
+        },
+        {
+          "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+          "authors": [
+            "Howard Zhang",
+            "Chuck Arvin",
+            "Logan Brown",
+            "Mihir Bhatia",
+            "Neelu Choudhary",
+            "Lily Miao"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.14493v1",
+          "url": "https://arxiv.org/abs/2611.14493v1"
+        }
+      ]
+    },
+    {
+      "name": "Tool use & MCP",
+      "query": "(cat:cs.AI OR cat:cs.CL) AND (abs:\"tool use\" OR abs:\"tool calling\" OR abs:\"model context protocol\")",
+      "papers": [
+        {
+          "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
+          "authors": [
+            "Kaiyuan Hou",
+            "Yang Ping Kuo",
+            "Indranil Bhattacharya",
+            "Rohith Nama",
+            "Arushi Gupta",
+            "Carlos D. Castillo",
+            "Prathap Ramachandra",
+            "Xiaofan Jiang",
+            "Francesco Carbone"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.14492v1",
+          "url": "https://arxiv.org/abs/2611.14492v1"
+        },
+        {
+          "title": "When Should Agents Remember? Falsification-Gated Self-Evolution for LLM Agents",
+          "authors": [
+            "Runxuan Tang",
+            "Haoyu Gao",
+            "Yuyan Ding",
+            "Junyi Yao",
+            "Zihao Zheng",
+            "Zecheng Sheng",
+            "Liwei Hou"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.14326v1",
+          "url": "https://arxiv.org/abs/2611.14326v1"
+        }
+      ]
+    },
+    {
+      "name": "Retrieval & RAG",
+      "query": "(cat:cs.CL OR cat:cs.IR) AND (abs:\"retrieval-augmented generation\" OR abs:\"RAG\")",
+      "papers": [
+        {
+          "title": "Controlled Knowledge Engineering for Taxonomy Induction with Tool-Grounded LLM Agents and Runtime-Adaptive Policies",
+          "authors": [
+            "Jonas Limniatis",
+            "Bennet Schaarmann",
+            "Georg Reuber",
+            "Robert Stahlbock"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.13966v1",
+          "url": "https://arxiv.org/abs/2611.13966v1"
+        },
+        {
+          "title": "OpticalRAG: Pixel-Space Compression for Token-Efficient Retrieval-Augmented Generation",
+          "authors": [
+            "Senhao Liu",
+            "Yuheng Zhang",
+            "Chunyu Wei",
+            "Yueguo Chen",
+            "Xinran Zhang"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.13675v1",
+          "url": "https://arxiv.org/abs/2611.13675v1"
+        }
+      ]
+    },
+    {
+      "name": "Evaluation & guardrails",
+      "query": "(cat:cs.AI OR cat:cs.CL) AND (abs:\"agent evaluation\" OR abs:\"LLM judge\" OR abs:\"guardrails\")",
+      "papers": [
+        {
+          "title": "An AI Assistant for Automating Anti-Corruption Expertise of Draft Legislation Based on the TRACE Framework",
+          "authors": [
+            "Serhii Zabolotnii",
+            "Alina Tarasova"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.14244v1",
+          "url": "https://arxiv.org/abs/2611.14244v1"
+        },
+        {
+          "title": "HandsOnAid: Building and Evaluating an Offline First-Aid Assistant for Emergency Response Scenarios",
+          "authors": [
+            "Rezwan Islam Salvi",
+            "Saiyma Sittul Muna",
+            "Mushfiqur Rahman Mushfique"
+          ],
+          "published": "2026-11-10",
+          "id": "2611.14059v1",
+          "url": "https://arxiv.org/abs/2611.14059v1"
+        }
+      ]
+    }
+  ]
+}
