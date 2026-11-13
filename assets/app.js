@@ -114,6 +114,61 @@ var getJSON = function (url) {
     .catch(function () { /* keep the static fallback */ });
 })();
 
+/* ---------- language toggle (nd page) ---------- */
+(function () {
+  var blocks = [].slice.call(document.querySelectorAll('[data-lang]'));
+  if (!blocks.length) return;
+
+  var buttons = [].slice.call(document.querySelectorAll('[data-lang-set]'));
+  var KEY = 'nd:lang';
+
+  var apply = function (lang) {
+    if (lang !== 'es') lang = 'en';
+    blocks.forEach(function (b) {
+      b.hidden = b.getAttribute('data-lang') !== lang;
+    });
+    buttons.forEach(function (b) {
+      var on = b.getAttribute('data-lang-set') === lang;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    document.documentElement.lang = lang;
+    try { localStorage.setItem(KEY, lang); } catch (e) { /* ignore */ }
+  };
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-lang-set')); });
+  });
+
+  var saved = 'en';
+  try { saved = localStorage.getItem(KEY) || 'en'; } catch (e) { /* ignore */ }
+  apply(saved);
+})();
+
+/* ---------- nd notes (nd.json) ---------- */
+(function () {
+  var boxes = [].slice.call(document.querySelectorAll('[data-notes]'));
+  if (!boxes.length) return;
+
+  getJSON('/nd.json')
+    .then(function (data) {
+      var notes = data.notes || [];
+      if (!notes.length) return;
+
+      boxes.forEach(function (box) {
+        var lang = box.getAttribute('data-notes') === 'es' ? 'es' : 'en';
+        box.innerHTML = '<ul class="feed notes">' + notes.map(function (n) {
+          var text = lang === 'es' ? (n.es || n.en) : (n.en || n.es);
+          var item = n.url
+            ? '<a class="ptitle" href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(text) + '</a>'
+            : '<span class="ptitle">' + esc(text) + '</span>';
+          return '<li>' + item + '<span class="pmeta">' + esc(when(n.date)) + '</span></li>';
+        }).join('') + '</ul>';
+      });
+    })
+    .catch(function () { /* keep the static fallback */ });
+})();
+
 /* ---------- console signature ---------- */
 (function () {
   var tag = 'background:#0d1117;color:#58a6ff;font:600 12px/1 ui-monospace,monospace;padding:5px 8px;border-radius:4px';
