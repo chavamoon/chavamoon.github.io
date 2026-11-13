@@ -25,6 +25,70 @@ var getJSON = function (url) {
   });
 };
 
+/* ---------- language (whole site) ---------- */
+(function () {
+  var KEY = 'site:lang';
+  var DICT = window.I18N || { en: {}, es: {} };
+  var en = DICT.en || {};
+
+  var pick = function (dict, key) {
+    if (dict && dict[key] != null) return dict[key];
+    return en[key] != null ? en[key] : null;
+  };
+
+  var apply = function (lang) {
+    if (lang !== 'es') lang = 'en';
+    var dict = DICT[lang] || {};
+
+    [].slice.call(document.querySelectorAll('[data-i18n]')).forEach(function (el) {
+      var v = pick(dict, el.getAttribute('data-i18n'));
+      if (v != null) el.textContent = v;
+    });
+
+    [].slice.call(document.querySelectorAll('[data-i18n-html]')).forEach(function (el) {
+      var v = pick(dict, el.getAttribute('data-i18n-html'));
+      if (v != null) el.innerHTML = v;
+    });
+
+    [].slice.call(document.querySelectorAll('[data-i18n-attr]')).forEach(function (el) {
+      el.getAttribute('data-i18n-attr').split(';').forEach(function (pair) {
+        var bits = pair.split(':');
+        if (bits.length < 2) return;
+        var attr = bits[0].trim();
+        var v = pick(dict, bits[1].trim());
+        if (v != null) el.setAttribute(attr, v);
+      });
+    });
+
+    // long-form bilingual blocks (the /nd/ page keeps its own markup)
+    [].slice.call(document.querySelectorAll('[data-lang]')).forEach(function (b) {
+      b.hidden = b.getAttribute('data-lang') !== lang;
+    });
+
+    [].slice.call(document.querySelectorAll('[data-set-lang]')).forEach(function (b) {
+      var on = b.getAttribute('data-set-lang') === lang;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+
+    document.documentElement.lang = lang;
+    try { localStorage.setItem(KEY, lang); } catch (e) { /* ignore */ }
+    try { document.documentElement.setAttribute('data-base-title', document.title); } catch (e) { /* ignore */ }
+  };
+
+  window.applyLang = apply;
+
+  [].slice.call(document.querySelectorAll('[data-set-lang]')).forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+  });
+
+  var saved = 'en';
+  try {
+    saved = localStorage.getItem(KEY) || localStorage.getItem('nd:lang') || 'en';
+  } catch (e) { /* ignore */ }
+  apply(saved);
+})();
+
 /* ---------- radar tabs ---------- */
 (function () {
   var tabs = [].slice.call(document.querySelectorAll('.tab[data-panel]'));
@@ -98,11 +162,11 @@ var getJSON = function (url) {
         var more = 'https://arxiv.org/search/?searchtype=all&query=' +
           encodeURIComponent(t.name) + '&order=-announced_date_first';
         return '<div class="feed-group"><h3><span>' + esc(t.name) + '</span>' +
-          '<a href="' + esc(more) + '" target="_blank" rel="noopener">more on arXiv ↗</a></h3>' +
+          '<a href="' + esc(more) + '" target="_blank" rel="noopener" data-i18n="radar.more">more on arXiv ↗</a></h3>' +
           '<ul class="feed">' + rows + '</ul></div>';
       }).join('');
 
-      html += '<div class="feed-group"><h3><span>Keep browsing</span></h3><ul class="feed">' +
+      html += '<div class="feed-group"><h3><span data-i18n="radar.keep">Keep browsing</span></h3><ul class="feed">' +
         '<li><a class="ptitle" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">Everything new in cs.AI</a>' +
         '<span class="pmeta">arxiv.org/list/cs.AI/recent</span></li>' +
         '<li><a class="ptitle" href="https://arxiv.org/list/cs.MA/recent" target="_blank" rel="noopener">Multi-agent systems</a>' +
@@ -112,37 +176,6 @@ var getJSON = function (url) {
       box.innerHTML = html;
     })
     .catch(function () { /* keep the static fallback */ });
-})();
-
-/* ---------- language toggle (nd page) ---------- */
-(function () {
-  var blocks = [].slice.call(document.querySelectorAll('[data-lang]'));
-  if (!blocks.length) return;
-
-  var buttons = [].slice.call(document.querySelectorAll('[data-lang-set]'));
-  var KEY = 'nd:lang';
-
-  var apply = function (lang) {
-    if (lang !== 'es') lang = 'en';
-    blocks.forEach(function (b) {
-      b.hidden = b.getAttribute('data-lang') !== lang;
-    });
-    buttons.forEach(function (b) {
-      var on = b.getAttribute('data-lang-set') === lang;
-      b.classList.toggle('on', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-    document.documentElement.lang = lang;
-    try { localStorage.setItem(KEY, lang); } catch (e) { /* ignore */ }
-  };
-
-  buttons.forEach(function (b) {
-    b.addEventListener('click', function () { apply(b.getAttribute('data-lang-set')); });
-  });
-
-  var saved = 'en';
-  try { saved = localStorage.getItem(KEY) || 'en'; } catch (e) { /* ignore */ }
-  apply(saved);
 })();
 
 /* ---------- nd notes (nd.json) ---------- */
@@ -193,14 +226,14 @@ var getJSON = function (url) {
 
 /* ---------- tab title on blur ---------- */
 (function () {
-  var base = document.title;
   var fileEl = document.querySelector('.file');
-  var label = fileEl && fileEl.textContent.trim() ? fileEl.textContent.trim() : base;
+  var label = fileEl && fileEl.textContent.trim() ? fileEl.textContent.trim() : document.title;
   var away = false;
 
   var setAway = function (on) {
     if (on === away) return;
     away = on;
+    var base = document.documentElement.getAttribute('data-base-title') || document.title;
     document.title = on ? '\u25cf ' + label + ' \u2014 1 unread' : base;
   };
 

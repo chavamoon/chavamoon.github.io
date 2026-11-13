@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>nd — Autism and neurodivergence — Salvador Luna</title>
 <meta name="description" content="Salvador Luna on autism and neurodivergence: why he doesn't treat it as a deficit, the material worth reading, and the language he uses.">
-<link rel="icon" href="/assets/photo.jpg">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="author" href="/humans.txt">
 </head>
@@ -14,13 +16,17 @@
 <div class="chrome">
   <span class="dots"><i></i><i></i><i></i></span>
   <span class="file">nd<em>.md</em></span>
-  <nav class="nav" aria-label="Sections">
-    <a href="/">home</a>
-    <a href="/games/">games</a>
-    <a href="/radar/">radar</a>
-    <a href="/nd/" class="on" aria-current="page">nd</a>
-    <a class="cv" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV &#8599;</a>
+  <nav class="nav" aria-label="Sections" data-i18n-attr="aria-label:nav.label">
+    <a href="/" data-i18n="nav.home">home</a>
+    <a href="/games/" data-i18n="nav.games">games</a>
+    <a href="/radar/" data-i18n="nav.radar">radar</a>
+    <a href="/nd/" class="on" aria-current="page" data-i18n="nav.nd">nd</a>
+    <a class="cv" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener" data-i18n="nav.cv">CV ↗</a>
   </nav>
+  <span class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:nav.lang">
+    <button type="button" data-set-lang="en" class="on" aria-pressed="true">EN</button>
+    <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+  </span>
 </div>
 
 <header class="page-head">
@@ -28,18 +34,12 @@
     <img class="avatar" src="/assets/photo.jpg" alt="" width="52" height="52">
     <div>
       <p class="crumb"><a href="/">Salvador Luna</a> / <b>nd</b></p>
-      <p class="page-sub">Autism and neurodivergence, in plain terms.</p>
+      <p class="page-sub" data-i18n="nd.sub">Autism and neurodivergence, in plain terms.</p>
     </div>
   </div>
 </header>
 
 <main>
-  <div class="langbar" role="group" aria-label="Language">
-    <span class="lbl">language</span>
-    <button class="lbtn on" type="button" data-lang-set="en" aria-pressed="true">EN</button>
-    <button class="lbtn" type="button" data-lang-set="es" aria-pressed="false">ES</button>
-  </div>
-
   <div data-lang="en">
 
     <section>
@@ -52,7 +52,8 @@
       <p>
         This page is the list I wish I'd had when I started reading about it: material
         that treats neurodivergence as part of a person instead of an error to correct.
-        I'm not a clinician and nobody paid me to write this. It's just what helped me.
+        Autism is part of my identity, and I accept it as part of who I am — it isn't a
+        flaw I'm working around.
       </p>
     </section>
 
@@ -161,11 +162,11 @@
       <div data-notes="en">
         <ul class="feed">
           <li>
-            <span class="ptitle">The double empathy problem explains more about my worst meetings than any productivity book.</span>
+            <a class="ptitle" href="https://en.wikipedia.org/wiki/Double_empathy_problem" target="_blank" rel="noopener">The double empathy problem explains more about my worst meetings than any productivity book.</a>
             <span class="pmeta">12 Nov 2026</span>
           </li>
           <li>
-            <span class="ptitle">Unmasking Autism, Devon Price. The chapter on masking is the one I keep coming back to.</span>
+            <a class="ptitle" href="https://autisticadvocacy.org/book/loud-hands-autistic-people-speaking/" target="_blank" rel="noopener">Loud Hands: Autistic People, Speaking — the title is the whole argument.</a>
             <span class="pmeta">5 Nov 2026</span>
           </li>
         </ul>
@@ -186,8 +187,8 @@
       <p>
         Esta página es la lista que me habría gustado tener cuando empecé a leer sobre
         el tema: material que trata la neurodivergencia como parte de una persona, no
-        como un error que corregir. No soy clínico y nadie me pagó por escribir esto.
-        Es simplemente lo que a mí me sirvió.
+        como un error que corregir. El autismo es parte de mi identidad y lo acepto como
+        parte de quien soy: no es un defecto que esté sorteando.
       </p>
     </section>
 
@@ -297,11 +298,11 @@
       <div data-notes="es">
         <ul class="feed">
           <li>
-            <span class="ptitle">El problema de la doble empatía explica más de mis peores reuniones que cualquier libro de productividad.</span>
+            <a class="ptitle" href="https://en.wikipedia.org/wiki/Double_empathy_problem" target="_blank" rel="noopener">El problema de la doble empatía explica más de mis peores reuniones que cualquier libro de productividad.</a>
             <span class="pmeta">12 Nov 2026</span>
           </li>
           <li>
-            <span class="ptitle">Unmasking Autism, Devon Price. El capítulo sobre el masking es al que siempre vuelvo.</span>
+            <a class="ptitle" href="https://autisticadvocacy.org/book/loud-hands-autistic-people-speaking/" target="_blank" rel="noopener">Loud Hands: Autistic People, Speaking — el título es todo el argumento.</a>
             <span class="pmeta">5 Nov 2026</span>
           </li>
         </ul>
@@ -311,7 +312,7 @@
   </div>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2 data-i18n="common.contact">Contact</h2>
     <ul class="links">
       <li><a href="mailto:salvadorlunahdz@hotmail.com">salvadorlunahdz@hotmail.com</a></li>
       <li><a href="https://www.linkedin.com/in/salvadorlunahdz/" target="_blank" rel="noopener">linkedin</a></li>
@@ -323,14 +324,15 @@
 
 <footer class="status">
   <span><span class="dot"></span><span class="branch">main</span></span>
-  <span>AI Engineer · Guadalajara, MX</span>
+  <span data-i18n="footer.role">AI Engineer · Guadalajara, MX</span>
   <span class="right">
-    <span><a href="/quanta/privacy/" style="color:inherit">privacy</a></span>
+    <span><a href="/quanta/privacy/" style="color:inherit" data-i18n="footer.privacy">privacy</a></span>
     <span><a href="/app-ads.txt" style="color:inherit">app-ads.txt</a></span>
     <span id="y">2026</span>
   </span>
 </footer>
 
+<script src="/assets/i18n.js"></script>
 <script src="/assets/app.js"></script>
 </body>
 </html>

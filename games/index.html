@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Games — Salvador Luna</title>
-<meta name="description" content="Small, self-contained games built with Godot by Salvador Luna (chavamoon). QUANTA, an endless momentum platformer for Android.">
-<link rel="icon" href="/assets/photo.jpg">
+<title data-i18n="games.title">Games — Salvador Luna</title>
+<meta name="description" data-i18n-attr="content:games.desc" content="Small, self-contained games built with Godot by Salvador Luna (chavamoon). QUANTA, an endless momentum platformer for Android.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="author" href="/humans.txt">
 </head>
@@ -14,13 +16,17 @@
 <div class="chrome">
   <span class="dots"><i></i><i></i><i></i></span>
   <span class="file">games<em>.md</em></span>
-  <nav class="nav" aria-label="Sections">
-    <a href="/">home</a>
-    <a href="/games/" class="on" aria-current="page">games</a>
-    <a href="/radar/">radar</a>
-    <a href="/nd/">nd</a>
-    <a class="cv" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV &#8599;</a>
+  <nav class="nav" aria-label="Sections" data-i18n-attr="aria-label:nav.label">
+    <a href="/" data-i18n="nav.home">home</a>
+    <a href="/games/" class="on" aria-current="page" data-i18n="nav.games">games</a>
+    <a href="/radar/" data-i18n="nav.radar">radar</a>
+    <a href="/nd/" data-i18n="nav.nd">nd</a>
+    <a class="cv" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener" data-i18n="nav.cv">CV ↗</a>
   </nav>
+  <span class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:nav.lang">
+    <button type="button" data-set-lang="en" class="on" aria-pressed="true">EN</button>
+    <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+  </span>
 </div>
 
 <header class="page-head">
@@ -28,18 +34,18 @@
     <img class="avatar" src="/assets/photo.jpg" alt="" width="52" height="52">
     <div>
       <p class="crumb"><a href="/">Salvador Luna</a> / <b>games</b></p>
-      <p class="page-sub">Small, self-contained games built with Godot.</p>
+      <p class="page-sub" data-i18n="games.sub">Small, self-contained games built with Godot.</p>
     </div>
   </div>
 </header>
 
 <main>
   <section>
-    <h2>Games</h2>
+    <h2 data-i18n="games.h2">Games</h2>
 
     <a class="game" href="/quanta/">
-      <b>QUANTA</b><span class="tag">Android · in testing</span>
-      <p>
+      <b>QUANTA</b><span class="tag" data-i18n="games.tag">Android · in testing</span>
+      <p data-i18n="games.quanta">
         An endless momentum platformer. You never stop running: dash through hazards,
         chain combos, and race the same daily track as everyone else. Levels are seeded
         and the physics are deterministic, so the same seed is the same track for every
@@ -47,14 +53,14 @@
       </p>
     </a>
 
-    <p class="note">
+    <p class="note" data-i18n="games.note">
       QUANTA is in closed testing on Google Play. There is no public download link yet.
       More experiments are on the way — the small ones end up here first.
     </p>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2 data-i18n="common.contact">Contact</h2>
     <ul class="links">
       <li><a href="mailto:salvadorlunahdz@hotmail.com">salvadorlunahdz@hotmail.com</a></li>
       <li><a href="https://www.linkedin.com/in/salvadorlunahdz/" target="_blank" rel="noopener">linkedin</a></li>
@@ -66,14 +72,15 @@
 
 <footer class="status">
   <span><span class="dot"></span><span class="branch">main</span></span>
-  <span>AI Engineer · Guadalajara, MX</span>
+  <span data-i18n="footer.role">AI Engineer · Guadalajara, MX</span>
   <span class="right">
-    <span><a href="/quanta/privacy/" style="color:inherit">privacy</a></span>
+    <span><a href="/quanta/privacy/" style="color:inherit" data-i18n="footer.privacy">privacy</a></span>
     <span><a href="/app-ads.txt" style="color:inherit">app-ads.txt</a></span>
     <span id="y">2026</span>
   </span>
 </footer>
 
+<script src="/assets/i18n.js"></script>
 <script src="/assets/app.js"></script>
 </body>
 </html>

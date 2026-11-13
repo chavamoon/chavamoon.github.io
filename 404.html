@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Not found — Salvador Luna</title>
+<title data-i18n="404.title">Not found — Salvador Luna</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="/assets/photo.jpg">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="author" href="/humans.txt">
 </head>
@@ -14,40 +16,44 @@
 <div class="chrome">
   <span class="dots"><i></i><i></i><i></i></span>
   <span class="file">404<em>.md</em></span>
-  <nav class="nav" aria-label="Sections">
-    <a href="/">home</a>
-    <a href="/games/">games</a>
-    <a href="/radar/">radar</a>
-    <a href="/nd/">nd</a>
-    <a class="cv" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV &#8599;</a>
+  <nav class="nav" aria-label="Sections" data-i18n-attr="aria-label:nav.label">
+    <a href="/" data-i18n="nav.home">home</a>
+    <a href="/games/" data-i18n="nav.games">games</a>
+    <a href="/radar/" data-i18n="nav.radar">radar</a>
+    <a href="/nd/" data-i18n="nav.nd">nd</a>
+    <a class="cv" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener" data-i18n="nav.cv">CV ↗</a>
   </nav>
+  <span class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:nav.lang">
+    <button type="button" data-set-lang="en" class="on" aria-pressed="true">EN</button>
+    <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+  </span>
 </div>
 
 <main>
   <section>
     <h2>Error</h2>
-    <p class="lead">This file is not in the repo.</p>
-    <p>The page you asked for doesn't exist — maybe it moved. Try one of these:</p>
+    <p class="lead" data-i18n="404.lead">This file is not in the repo.</p>
+    <p data-i18n="404.body">The page you asked for doesn't exist — maybe it moved. Try one of these:</p>
     <div class="entries">
       <a class="entry" href="/">
-        <span class="k">home</span>
-        <h3>Who I am</h3>
-        <p>What I do and where I've been.</p>
+        <span class="k" data-i18n="404.home.k">home</span>
+        <h3 data-i18n="404.home.t">Who I am</h3>
+        <p data-i18n="404.home.p">What I do and where I've been.</p>
       </a>
       <a class="entry" href="/games/">
-        <span class="k">games</span>
-        <h3>QUANTA</h3>
-        <p>Small games built with Godot.</p>
+        <span class="k" data-i18n="404.games.k">games</span>
+        <h3 data-i18n="404.games.t">QUANTA</h3>
+        <p data-i18n="404.games.p">Small games built with Godot.</p>
       </a>
       <a class="entry" href="/nd/">
-        <span class="k">nd</span>
-        <h3>Autism and neurodivergence</h3>
-        <p>Resources and language, in English and Spanish.</p>
+        <span class="k" data-i18n="404.nd.k">nd</span>
+        <h3 data-i18n="404.nd.t">Autism and neurodivergence</h3>
+        <p data-i18n="404.nd.p">Resources and language, in English and Spanish.</p>
       </a>
       <a class="entry" href="/radar/">
-        <span class="k">radar</span>
-        <h3>What I'm reading</h3>
-        <p>The newest papers on agentic AI.</p>
+        <span class="k" data-i18n="404.radar.k">radar</span>
+        <h3 data-i18n="404.radar.t">What I'm reading</h3>
+        <p data-i18n="404.radar.p">The newest papers on agentic AI.</p>
       </a>
     </div>
   </section>
@@ -55,14 +61,15 @@
 
 <footer class="status">
   <span><span class="dot"></span><span class="branch">main</span></span>
-  <span>AI Engineer · Guadalajara, MX</span>
+  <span data-i18n="footer.role">AI Engineer · Guadalajara, MX</span>
   <span class="right">
-    <span><a href="/quanta/privacy/" style="color:inherit">privacy</a></span>
+    <span><a href="/quanta/privacy/" style="color:inherit" data-i18n="footer.privacy">privacy</a></span>
     <span><a href="/app-ads.txt" style="color:inherit">app-ads.txt</a></span>
     <span id="y">2026</span>
   </span>
 </footer>
 
+<script src="/assets/i18n.js"></script>
 <script src="/assets/app.js"></script>
 </body>
 </html>

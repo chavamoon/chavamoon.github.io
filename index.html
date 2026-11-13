@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Salvador Luna — AI Engineer, agentic systems &amp; game developer</title>
-<meta name="description" content="Salvador Luna (chavamoon) — AI engineer working on agentic systems, MCP tool contracts and ontology engineering. Maker of QUANTA, an endless momentum platformer for Android.">
-<link rel="icon" href="/assets/photo.jpg">
+<title data-i18n="home.title">Salvador Luna — AI Engineer, agentic systems &amp; game developer</title>
+<meta name="description" data-i18n-attr="content:home.desc" content="Salvador Luna (chavamoon) — AI engineer working on agentic systems, MCP tool contracts and ontology engineering. Maker of QUANTA, an endless momentum platformer for Android.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="author" href="/humans.txt">
 </head>
@@ -14,21 +16,25 @@
 <div class="chrome">
   <span class="dots"><i></i><i></i><i></i></span>
   <span class="file">salvador-luna<em>.cv.md</em></span>
-  <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">home</a>
-    <a href="/games/">games</a>
-    <a href="/radar/">radar</a>
-    <a href="/nd/">nd</a>
-    <a class="cv" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">CV &#8599;</a>
+  <nav class="nav" aria-label="Sections" data-i18n-attr="aria-label:nav.label">
+    <a href="/" class="on" aria-current="page" data-i18n="nav.home">home</a>
+    <a href="/games/" data-i18n="nav.games">games</a>
+    <a href="/radar/" data-i18n="nav.radar">radar</a>
+    <a href="/nd/" data-i18n="nav.nd">nd</a>
+    <a class="cv" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener" data-i18n="nav.cv">CV ↗</a>
   </nav>
+  <span class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:nav.lang">
+    <button type="button" data-set-lang="en" class="on" aria-pressed="true">EN</button>
+    <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+  </span>
 </div>
 
 <header class="hero">
   <div class="hero-in">
     <img class="photo" src="/assets/photo.jpg" alt="Salvador Luna Hernández" width="132" height="132">
     <div>
-      <h1>Salvador Luna<em>Hernández</em></h1>
-      <p class="tagline">AI Engineer<span>|</span>agentic AI<span>|</span>MCP<span>|</span>LLM engineering</p>
+      <h1>Salvador<em>Luna Hernández</em></h1>
+      <p class="tagline" data-i18n-html="home.tagline">AI Engineer<span>|</span>agentic AI<span>|</span>MCP<span>|</span>LLM engineering</p>
     </div>
   </div>
   <ul class="contacts">
@@ -49,52 +55,44 @@
 
 <main>
   <section id="about">
-    <h2>About</h2>
-    <p class="lead">
+    <h2 data-i18n="home.about">About</h2>
+    <p class="lead" data-i18n="home.about1">
       I build AI systems that do real work — agentic architectures, MCP tool contracts and
       LLM workflows that hold up in production. I started as a software developer, moved
       into data science, and these days what I enjoy most is building agents that can
       actually do the job.
     </p>
-    <p>
+    <p data-i18n="home.about2">
       Outside of that I build small games with Godot: the kind of software where you can
       feel the result ten seconds after you press play.
     </p>
 
-    <div class="chips">
-      <span>Agentic AI</span><span>MCP</span><span>LangGraph</span><span>LangChain</span>
-      <span>DeepAgents</span><span>Google ADK</span><span>RAG</span>
-      <span>Ontology Engineering</span><span>Python</span><span>TypeScript</span>
-      <span>AWS</span><span>Azure</span><span>Amazon Bedrock</span><span>Kubernetes</span>
-      <span>Terraform</span>
-    </div>
-
     <div class="entries">
       <a class="entry" href="/games/">
-        <span class="k">01 — games</span>
-        <h3>QUANTA and the next experiments</h3>
-        <p>Small, self-contained games built with Godot.</p>
+        <span class="k" data-i18n="home.games.k">01 — games</span>
+        <h3 data-i18n="home.games.t">QUANTA and the next experiments</h3>
+        <p data-i18n="home.games.p">Small, self-contained games built with Godot.</p>
       </a>
       <a class="entry" href="/radar/">
-        <span class="k">02 — radar</span>
-        <h3>What I'm reading</h3>
-        <p>The newest papers on agentic AI, tool use and RAG.</p>
+        <span class="k" data-i18n="home.radar.k">02 — radar</span>
+        <h3 data-i18n="home.radar.t">What I'm reading</h3>
+        <p data-i18n="home.radar.p">The newest papers on agentic AI, tool use and RAG.</p>
       </a>
       <a class="entry" href="/nd/">
-        <span class="k">03 — nd</span>
-        <h3>How my brain works</h3>
-        <p>Autism and neurodivergence, and what's worth reading about it.</p>
+        <span class="k" data-i18n="home.nd.k">03 — nd</span>
+        <h3 data-i18n="home.nd.t">How my brain works</h3>
+        <p data-i18n="home.nd.p">Autism and neurodivergence, and what's worth reading about it.</p>
       </a>
       <a class="entry" href="/cv/Salvador_Luna_CV.pdf" target="_blank" rel="noopener">
-        <span class="k">04 — CV</span>
-        <h3>The whole thing, as a PDF</h3>
-        <p>Skills, certifications and the full job history.</p>
+        <span class="k" data-i18n="home.cv.k">04 — CV</span>
+        <h3 data-i18n="home.cv.t">The whole thing, as a PDF</h3>
+        <p data-i18n="home.cv.p">Certifications and the full job history.</p>
       </a>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2 data-i18n="common.contact">Contact</h2>
     <ul class="links">
       <li><a href="mailto:salvadorlunahdz@hotmail.com">salvadorlunahdz@hotmail.com</a></li>
       <li><a href="https://www.linkedin.com/in/salvadorlunahdz/" target="_blank" rel="noopener">linkedin</a></li>
@@ -106,14 +104,15 @@
 
 <footer class="status">
   <span><span class="dot"></span><span class="branch">main</span></span>
-  <span>AI Engineer · Guadalajara, MX</span>
+  <span data-i18n="footer.role">AI Engineer · Guadalajara, MX</span>
   <span class="right">
-    <span><a href="/quanta/privacy/" style="color:inherit">privacy</a></span>
+    <span><a href="/quanta/privacy/" style="color:inherit" data-i18n="footer.privacy">privacy</a></span>
     <span><a href="/app-ads.txt" style="color:inherit">app-ads.txt</a></span>
     <span id="y">2026</span>
   </span>
 </footer>
 
+<script src="/assets/i18n.js"></script>
 <script src="/assets/app.js"></script>
 </body>
 </html>
