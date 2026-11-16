@@ -30,6 +30,13 @@ python3 ~/.config/opencode/skills/cv-site/scripts/build.py --out ./my-site
 
 On Windows use `python` and `%USERPROFILE%\.config\opencode\skills\cv-site\scripts\build.py`.
 
+This file follows the open Agent Skills format (`SKILL.md` with `name`
+and `description`), so it also loads in Claude Code, Codex CLI, Gemini CLI
+and Cursor once the folder sits in their skills directory — see
+`README.md`. With an agent that has no skills support, point it at this
+file and tell it to follow it. Tool names below are OpenCode's; use the
+equivalent in your host (`question` ≈ `AskUserQuestion`, `read` ≈ `Read`).
+
 ## Non-negotiables
 
 1. **Facts come from the user.** Never invent an employer, date, title,
@@ -41,9 +48,10 @@ On Windows use `python` and `%USERPROFILE%\.config\opencode\skills\cv-site\scrip
 3. **Never overwrite an existing repository.** `publish.py` refuses by
    default; only pass `--force` after the user explicitly says the repo is
    theirs and may be replaced.
-4. **At most four questions per round.** Use the `question` tool for
-   multiple choice. Always make the first option a sensible default so
-   "you decide" is a valid answer.
+4. **At most four questions per round.** Use a multiple-choice question
+   tool when you have one (`question` in OpenCode, `AskUserQuestion` in
+   Claude Code), otherwise numbered options in prose. Always make the
+   first option a sensible default so "you decide" is a valid answer.
 5. **Interview in the user's language.** Write the site in the language
    they choose (default: the language of the CV). Keep this document and
    your code comments in English.
@@ -58,7 +66,7 @@ Ask for one of: a file path, pasted text, or a link.
 
 | Input | How to read it |
 | --- | --- |
-| PDF | the `read` tool reads PDFs directly — do not write a parser |
+| PDF | your file-reader handles PDFs (OpenCode `read`, Claude Code `Read`) — do not write a parser |
 | DOCX | `python3 scripts/docx_text.py "<file.docx>"` |
 | ODT/RTF/TXT | `read`, or ask them to paste |
 | A URL | ask them to download it or paste the text; do not scrape |

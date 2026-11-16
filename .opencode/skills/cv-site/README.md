@@ -16,43 +16,67 @@ library only, static HTML out.
 
 ## Install
 
-Skills live in a `skills/<name>/` folder with a `SKILL.md` inside.
+It is a skill folder: `SKILL.md` with YAML frontmatter, plus
+`references/`, `scripts/` and `templates/`. Copy the whole folder (keeping
+its structure) into your agent's skills directory. If it already has the
+`name`/`description` frontmatter, it is discovered automatically — you do
+not have to tell the agent anything.
 
-**Everyone on this machine** (recommended):
+| Agent | Folder |
+| --- | --- |
+| OpenCode | `~/.config/opencode/skills/cv-site/` or `<project>/.opencode/skills/cv-site/` |
+| Claude Code | `~/.claude/skills/cv-site/` or `<project>/.claude/skills/cv-site/` |
+| Codex CLI | `~/.agents/skills/cv-site/` (`~/.codex/skills/` also works) |
+| Gemini CLI | `~/.gemini/skills/cv-site/` |
+| Cursor | `<project>/.cursor/skills/cv-site/` |
 
-```
-~/.config/opencode/skills/cv-site/
-```
+On Windows, `~` is `%USERPROFILE%`, e.g.
+`%USERPROFILE%\.claude\skills\cv-site\`.
 
-On Windows that is:
-
-```
-%USERPROFILE%\.config\opencode\skills\cv-site\
-```
-
-**Only this project:**
-
-```
-<project>/.opencode/skills/cv-site/
-```
-
-Copy the whole folder — `SKILL.md`, `references/`, `scripts/`,
-`templates/` — keeping the structure. Nothing else to install; verify with:
+You can keep one copy and link it instead of duplicating:
 
 ```sh
-opencode --version
-ls ~/.config/opencode/skills/cv-site/SKILL.md
+# macOS / Linux, OpenCode + Claude Code + the shared .agents folder
+ln -s ~/code/cv-site ~/.config/opencode/skills/cv-site
+ln -s ~/code/cv-site ~/.claude/skills/cv-site
+ln -s ~/code/cv-site ~/.agents/skills/cv-site
+```
+
+```powershell
+# Windows, same idea
+New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\cv-site" -Target "C:\code\cv-site"
+```
+
+Restart the agent (or reload skills) after copying. Check it is visible
+with its `/skills` command, or just ask for a CV site and see whether it
+picks it up.
+
+### Agents with no skills support
+
+Anything that can read files and run shell commands can use this without
+the mechanism: point it at `SKILL.md`.
+
+> Read `C:\code\cv-site\SKILL.md` and follow it. The paths in it are
+> relative to that folder. My CV is at `C:\Users\me\cv.pdf`.
+
+For ChatGPT/Codex `AGENTS.md`, Gemini's `GEMINI.md` or a Cursor rule, one
+line is enough:
+
+```markdown
+## CV site
+
+To build or update a personal site from a CV, read
+`skills/cv-site/SKILL.md` and follow it.
 ```
 
 ## Use it
 
-In OpenCode, say something like:
+Say something like:
 
 > I want a personal site from my CV. It's at ~/Desktop/cv.pdf
 
-or invoke the skill directly:
-
-> @cv-site
+or invoke the skill directly (`@cv-site` in OpenCode, `/cv-site` in
+Claude Code).
 
 It will ask for the CV, confirm what it read, offer a menu of sections,
 ask three style questions, build the site, show you what it looks like,
@@ -68,7 +92,7 @@ and publish when you say yes.
 Two themes: `ide` (dark top bar, monospace labels, light body) and
 `paper` (all light, serif).
 
-## Without OpenCode
+## Without an agent
 
 The scripts work on their own:
 
