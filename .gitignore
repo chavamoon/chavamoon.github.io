@@ -1,0 +1,11 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# archives built for sharing (keep them local, they go stale)
+*.zip
+
+# python bytecode from the cv-site skill
+__pycache__/
+*.pyc
