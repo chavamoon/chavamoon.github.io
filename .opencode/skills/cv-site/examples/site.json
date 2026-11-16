@@ -1,0 +1,108 @@
+{
+  "lang": "both",
+  "theme": "ide",
+  "name": "Marina Ortega",
+  "role": { "en": "Data engineer", "es": "Ingeniera de datos" },
+  "tagline": {
+    "en": ["pipelines that survive Mondays", "Postgres", "too much YAML"],
+    "es": ["pipelines que sobreviven los lunes", "Postgres", "demasiado YAML"]
+  },
+  "location": { "en": "Valencia, Spain", "es": "Valencia, España" },
+  "email": "marina@example.com",
+  "github": "https://github.com/octocat",
+  "linkedin": "https://www.linkedin.com/in/octocat",
+  "nav_home": { "en": "home", "es": "inicio" },
+  "sections": [
+    {
+      "type": "prose",
+      "id": "about",
+      "title": { "en": "About", "es": "Sobre mí" },
+      "paragraphs": [
+        {
+          "en": "I build the boring part of data platforms: ingestion, schemas, and the alerts that wake nobody up at 3am.",
+          "es": "Construyo la parte aburrida de las plataformas de datos: ingestión, esquemas y las alertas que no despiertan a nadie a las 3 de la mañana."
+        },
+        {
+          "en": "Nine years between analytics and infrastructure, mostly in Python and SQL.",
+          "es": "Nueve años entre analítica e infraestructura, sobre todo en Python y SQL."
+        }
+      ]
+    },
+    {
+      "type": "timeline",
+      "id": "experience",
+      "title": { "en": "Experience", "es": "Experiencia" },
+      "items": [
+        {
+          "when": { "en": "2022 — now", "es": "2022 — actualidad" },
+          "title": { "en": "Senior data engineer", "es": "Ingeniera de datos senior" },
+          "org": "Nexo Retail",
+          "bullets": [
+            {
+              "en": "Moved 40 nightly jobs from cron to Airflow; the on-call page went from weekly to twice a quarter.",
+              "es": "Moví 40 procesos nocturnos de cron a Airflow; las guardias pasaron de semanales a dos por trimestre."
+            },
+            {
+              "en": "Wrote the schema review checklist the team still uses for every new table.",
+              "es": "Escribí la lista de revisión de esquemas que el equipo sigue usando para cada tabla nueva."
+            }
+          ]
+        },
+        {
+          "when": { "en": "2019 — 2022", "es": "2019 — 2022" },
+          "title": { "en": "Analytics engineer", "es": "Ingeniera de analítica" },
+          "org": "Cabildo Software",
+          "text": {
+            "en": "Small team, so the warehouse and the dashboards were the same job.",
+            "es": "Equipo pequeño, así que el almacén y los cuadros de mando eran el mismo trabajo."
+          }
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "projects",
+      "title": { "en": "Projects", "es": "Proyectos" },
+      "items": [
+        {
+          "meta": "2025",
+          "title": "pipecheck",
+          "text": {
+            "en": "A tiny CLI that fails a CI job when a dbt model has no tests. 300 lines, no dependencies.",
+            "es": "Una CLI pequeña que falla el CI cuando un modelo dbt no tiene tests. 300 líneas, sin dependencias."
+          },
+          "href": "https://github.com/octocat"
+        },
+        {
+          "meta": "2023",
+          "title": { "en": "Warehouse notes", "es": "Notas de almacén" },
+          "text": {
+            "en": "A public notebook of schema decisions and the reasons behind them.",
+            "es": "Un cuaderno público de decisiones de esquema y sus motivos."
+          }
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "id": "writing",
+      "title": { "en": "Writing", "es": "Escritos" },
+      "items": [
+        {
+          "title": { "en": "Your cron job is a silent failure", "es": "Tu cron job es un fallo silencioso" },
+          "meta": { "en": "2025 · Blog", "es": "2025 · Blog" },
+          "href": "https://example.com/cron"
+        },
+        {
+          "title": { "en": "Schema review in ten minutes", "es": "Revisión de esquemas en diez minutos" },
+          "meta": { "en": "2024 · Talk", "es": "2024 · Charla" }
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "id": "contact",
+      "title": { "en": "Contact", "es": "Contacto" }
+    }
+  ]
+}
