@@ -1,59 +1,59 @@
 {
-  "generated": "2026-11-12",
+  "generated": "2026-11-16",
   "items": [
     {
-      "title": "Holiday Extras is rethinking what it can build with Codex",
-      "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+      "title": "Broadening access to AI for scientists",
+      "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
       "source": "OpenAI",
-      "published": "2026-11-12"
+      "published": "2026-11-16"
     },
     {
-      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+      "title": "New Ask Maps features to help with holiday travel and prep",
+      "url": "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/",
       "source": "Google AI",
-      "published": "2026-11-12"
+      "published": "2026-11-16"
+    },
+    {
+      "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+      "url": "https://huggingface.co/blog/openrouter",
+      "source": "Hugging Face",
+      "published": "2026-11-16"
+    },
+    {
+      "title": "All the questions Nvidia should answer on Tuesday — but probably won’t",
+      "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/",
+      "source": "TechCrunch AI",
+      "published": "2026-11-16"
+    },
+    {
+      "title": "Strengthening the fight against online child sexual abuse with new tools and support",
+      "url": "https://openai.com/index/strengthening-online-child-safety",
+      "source": "OpenAI",
+      "published": "2026-11-16"
+    },
+    {
+      "title": "California state AG sues OpenAI over rogue agent incidents",
+      "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
+      "source": "TechCrunch AI",
+      "published": "2026-11-16"
+    },
+    {
+      "title": "datasette-maplibre 0.1a0",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+      "source": "Simon Willison",
+      "published": "2026-11-15"
+    },
+    {
+      "title": "Understanding Positional Embeddings in Modern LLMs",
+      "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+      "source": "Sebastian Raschka",
+      "published": "2026-11-15"
     },
     {
       "title": "Introducing Gemini 4 Hydrogen",
       "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
       "source": "DeepMind",
       "published": "2026-11-12"
-    },
-    {
-      "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
-      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
-      "source": "Hugging Face",
-      "published": "2026-11-12"
-    },
-    {
-      "title": "Google’s latest Search upgrade promises better answers to your most complicated questions",
-      "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-      "source": "TechCrunch AI",
-      "published": "2026-11-12"
-    },
-    {
-      "title": "Supporting research on AI and children’s safety",
-      "url": "https://openai.com/index/children-first-declaration",
-      "source": "OpenAI",
-      "published": "2026-11-12"
-    },
-    {
-      "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
-      "url": "https://huggingface.co/blog/3d-lora-finetuning",
-      "source": "Hugging Face",
-      "published": "2026-11-12"
-    },
-    {
-      "title": "Gemini Decisions API",
-      "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
-      "source": "Simon Willison",
-      "published": "2026-11-11"
-    },
-    {
-      "title": "From Full to Hybrid Attention in LLMs",
-      "url": "https://sebastianraschka.com/blog/2026/full-to-hybrid-attention.html",
-      "source": "Sebastian Raschka",
-      "published": "2026-11-10"
     },
     {
       "title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",

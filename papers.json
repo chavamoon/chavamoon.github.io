@@ -1,67 +1,58 @@
 {
-  "generated": "2026-11-12",
+  "generated": "2026-11-16",
   "topics": [
     {
       "name": "Agent architectures",
       "query": "(cat:cs.MA OR cat:cs.AI) AND (abs:\"LLM agents\" OR abs:\"agent architecture\" OR abs:\"agentic\")",
       "papers": [
         {
-          "title": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
+          "title": "WeightBench: Evaluating Language Models as Weight-Space Programmers",
           "authors": [
-            "Ziang Liu",
-            "James J. Kim",
-            "Yijia Dai",
-            "Jennifer J. Sun"
+            "Aayush Marasini",
+            "Barsat Khadka",
+            "Nick Rahimi"
           ],
-          "published": "2026-11-10",
-          "id": "2611.14514v1",
-          "url": "https://arxiv.org/abs/2611.14514v1"
+          "published": "2026-11-13",
+          "id": "2611.18553v1",
+          "url": "https://arxiv.org/abs/2611.18553v1"
         },
         {
-          "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+          "title": "Imitation Bootstrapped Multi-Agent Reinforcement Learning",
           "authors": [
-            "Howard Zhang",
-            "Chuck Arvin",
-            "Logan Brown",
-            "Mihir Bhatia",
-            "Neelu Choudhary",
-            "Lily Miao"
+            "Tony H. Zhang",
+            "Connor Mattson",
+            "Daniel S. Brown"
           ],
-          "published": "2026-11-10",
-          "id": "2611.14493v1",
-          "url": "https://arxiv.org/abs/2611.14493v1"
+          "published": "2026-11-13",
+          "id": "2611.18543v1",
+          "url": "https://arxiv.org/abs/2611.18543v1"
         },
         {
-          "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
+          "title": "ModHarness-RL: Recasting Harnesses as Learnable and Evolving Programs for Agentic RL",
           "authors": [
-            "Kaiyuan Hou",
-            "Yang Ping Kuo",
-            "Indranil Bhattacharya",
-            "Rohith Nama",
-            "Arushi Gupta",
-            "Carlos D. Castillo",
-            "Prathap Ramachandra",
-            "Xiaofan Jiang",
-            "Francesco Carbone"
+            "Zelin He",
+            "Siyu Zhu",
+            "Jacob Helwig",
+            "Yujian Liu",
+            "Li An",
+            "Rohit Jain",
+            "Shiyu Chang",
+            "Alborz Geramifard"
           ],
-          "published": "2026-11-10",
-          "id": "2611.14492v1",
-          "url": "https://arxiv.org/abs/2611.14492v1"
+          "published": "2026-11-13",
+          "id": "2611.18533v1",
+          "url": "https://arxiv.org/abs/2611.18533v1"
         },
         {
-          "title": "One Policy for 100 Household Tasks: Our Solution for the 2026 BEHAVIOR Challenge",
+          "title": "Alignment by Socialization: Learning Tradeoffs Under Selection",
           "authors": [
-            "Ilia Larchenko",
-            "Gleb Zarin",
-            "Atindra Nair",
-            "Keerti Manney",
-            "Vitaly Kleban",
-            "Mirko Kiefer",
-            "Anjana Yodaiken"
+            "Thomas Brennan",
+            "Andrew W. Lo",
+            "Chaoyi Zhao"
           ],
-          "published": "2026-11-10",
-          "id": "2611.14432v1",
-          "url": "https://arxiv.org/abs/2611.14432v1"
+          "published": "2026-11-13",
+          "id": "2611.18531v1",
+          "url": "https://arxiv.org/abs/2611.18531v1"
         }
       ]
     },
@@ -70,53 +61,49 @@
       "query": "(cat:cs.AI OR cat:cs.CL) AND (abs:\"tool use\" OR abs:\"tool calling\" OR abs:\"model context protocol\")",
       "papers": [
         {
-          "title": "When Should Agents Remember? Falsification-Gated Self-Evolution for LLM Agents",
+          "title": "Agentic AI for Discovering Fault-Tolerant Quantum Circuits",
           "authors": [
-            "Runxuan Tang",
-            "Haoyu Gao",
-            "Yuyan Ding",
-            "Junyi Yao",
-            "Zihao Zheng",
-            "Zecheng Sheng",
-            "Liwei Hou"
+            "Aritra Lahiri",
+            "Florian Marquardt"
           ],
-          "published": "2026-11-10",
-          "id": "2611.14326v1",
-          "url": "https://arxiv.org/abs/2611.14326v1"
+          "published": "2026-11-13",
+          "id": "2611.18504v1",
+          "url": "https://arxiv.org/abs/2611.18504v1"
         },
         {
-          "title": "Controlled Knowledge Engineering for Taxonomy Induction with Tool-Grounded LLM Agents and Runtime-Adaptive Policies",
+          "title": "ARCHER: From Rationale Imitation to Executable Reasoning in Small Language Models",
           "authors": [
-            "Jonas Limniatis",
-            "Bennet Schaarmann",
-            "Georg Reuber",
-            "Robert Stahlbock"
+            "Dhruv Dixit",
+            "Khushi Patel",
+            "Congcong Xu",
+            "Min Song"
           ],
-          "published": "2026-11-10",
-          "id": "2611.13966v1",
-          "url": "https://arxiv.org/abs/2611.13966v1"
+          "published": "2026-11-13",
+          "id": "2611.18494v1",
+          "url": "https://arxiv.org/abs/2611.18494v1"
         },
         {
-          "title": "DrugCoding: A Scientific Programming Agent for Drug Discovery",
+          "title": "Personalization of Basic and Moral Values Guiding LLM-Controlled Assistant Robots",
           "authors": [
-            "Junwei Hu",
-            "Zhuohao Lin",
-            "Kun Li",
-            "Hengnan Zhang"
+            "Mateusz Wozniak",
+            "Qi Gao",
+            "Agnieszka Wykowska"
           ],
-          "published": "2026-11-10",
-          "id": "2611.13651v1",
-          "url": "https://arxiv.org/abs/2611.13651v1"
+          "published": "2026-11-13",
+          "id": "2611.18230v1",
+          "url": "https://arxiv.org/abs/2611.18230v1"
         },
         {
-          "title": "Agent-Guided Discovery of Exchange-Correlation Functionals with Physics-based Validation",
+          "title": "Soteria: Formally Verified Planning with Runtime Enforcement for Safe LLM Agents",
           "authors": [
-            "Achuth Chandrasekhar",
-            "Amir Barati Farimani"
+            "Mike He",
+            "Ankush Desai",
+            "Sharad Malik",
+            "Aarti Gupta"
           ],
-          "published": "2026-11-09",
-          "id": "2611.13329v1",
-          "url": "https://arxiv.org/abs/2611.13329v1"
+          "published": "2026-11-13",
+          "id": "2611.17880v1",
+          "url": "https://arxiv.org/abs/2611.17880v1"
         }
       ]
     },
@@ -125,51 +112,60 @@
       "query": "(cat:cs.CL OR cat:cs.IR) AND (abs:\"retrieval-augmented generation\" OR abs:\"RAG\")",
       "papers": [
         {
-          "title": "OpticalRAG: Pixel-Space Compression for Token-Efficient Retrieval-Augmented Generation",
+          "title": "RAG-FGO: Dynamic Optimization of Query-Rewriting Agents for Generative RAG",
           "authors": [
-            "Senhao Liu",
-            "Yuheng Zhang",
-            "Chunyu Wei",
-            "Yueguo Chen",
-            "Xinran Zhang"
+            "Qigan Sun",
+            "Xudong Wang",
+            "Chaoning Zhang",
+            "Chenghao Li",
+            "Jiaquan Zhang",
+            "Jiehui Xie",
+            "Sungyoung Lee",
+            "Jie Zou",
+            "Ning Xie",
+            "Peng Wang",
+            "Yang Yang",
+            "Heng Tao Shen"
           ],
-          "published": "2026-11-10",
-          "id": "2611.13675v1",
-          "url": "https://arxiv.org/abs/2611.13675v1"
+          "published": "2026-11-13",
+          "id": "2611.17788v1",
+          "url": "https://arxiv.org/abs/2611.17788v1"
         },
         {
-          "title": "BharatSynthQA: A Context-Grounded Question Answering Dataset on Indian Temples and Religious Heritage",
+          "title": "RMIT-ADM+S at TREC RAG 2026: Research Agents, Retriever Ablations, and Open-Weight Replication",
           "authors": [
-            "Riya Naik",
-            "Shivam Sharma",
-            "Swati Agarwal"
+            "Oleg Zendel",
+            "Kun Ran",
+            "Chenglong Ma",
+            "Nguyen Khoi Vo",
+            "Shuai Wang"
           ],
-          "published": "2026-11-09",
-          "id": "2611.11952v1",
-          "url": "https://arxiv.org/abs/2611.11952v1"
+          "published": "2026-11-12",
+          "id": "2611.16425v1",
+          "url": "https://arxiv.org/abs/2611.16425v1"
         },
         {
-          "title": "AOP-Smart-Finder: A High-Throughput Human-AI Hybrid Framework for AOP Discovery and Evidence Mapping from Large-Scale Literature",
+          "title": "CURATOR: Scalable Fine-grained Evidence Selection for Retrieval-Augmented Generation using Decision Models",
           "authors": [
-            "Qinjiang Niu",
-            "Lu Yan"
+            "Shib Dasgupta",
+            "Bandish Parikh",
+            "Rashmi Gangadharaiah"
           ],
-          "published": "2026-11-08",
-          "id": "2611.11349v1",
-          "url": "https://arxiv.org/abs/2611.11349v1"
+          "published": "2026-11-12",
+          "id": "2611.16366v1",
+          "url": "https://arxiv.org/abs/2611.16366v1"
         },
         {
-          "title": "PCG-RAG: Progressive Compositional Grounding for Retrieval-Augmented Generation in Complex Web Question Answering",
+          "title": "Calibrated Early Termination with Bounded Optimality Gaps for Constrained Vector Search",
           "authors": [
-            "Linyao Zheng",
-            "Xuhang Shi",
-            "Zhifang Mao",
-            "Chongqi Qu",
-            "Xiuquan Hou"
+            "Xinyu Zhang",
+            "Jingze Li",
+            "Baihua Zheng",
+            "Weiwei Sun"
           ],
-          "published": "2026-11-08",
-          "id": "2611.11113v1",
-          "url": "https://arxiv.org/abs/2611.11113v1"
+          "published": "2026-11-12",
+          "id": "2611.16148v1",
+          "url": "https://arxiv.org/abs/2611.16148v1"
         }
       ]
     },
@@ -178,52 +174,52 @@
       "query": "(cat:cs.AI OR cat:cs.CL) AND (abs:\"agent evaluation\" OR abs:\"LLM judge\" OR abs:\"guardrails\")",
       "papers": [
         {
-          "title": "An AI Assistant for Automating Anti-Corruption Expertise of Draft Legislation Based on the TRACE Framework",
+          "title": "Do Verifier Judgments Survive Abstraction? Measuring Verification Transport for LLM Agent Evaluation",
           "authors": [
-            "Serhii Zabolotnii",
-            "Alina Tarasova"
+            "Disha Sheshanarayana",
+            "Sai Linisha Reddy Goli"
           ],
-          "published": "2026-11-10",
-          "id": "2611.14244v1",
-          "url": "https://arxiv.org/abs/2611.14244v1"
+          "published": "2026-11-13",
+          "id": "2611.18471v1",
+          "url": "https://arxiv.org/abs/2611.18471v1"
         },
         {
-          "title": "HandsOnAid: Building and Evaluating an Offline First-Aid Assistant for Emergency Response Scenarios",
+          "title": "Agent-as-a-Judge",
           "authors": [
-            "Rezwan Islam Salvi",
-            "Saiyma Sittul Muna",
-            "Mushfiqur Rahman Mushfique"
+            "Runyang You",
+            "Hongru Cai",
+            "Caiqi Zhang",
+            "Qiancheng Xu",
+            "Meng Liu",
+            "Tiezheng Yu",
+            "Yongqi Li",
+            "Wenjie Li"
           ],
-          "published": "2026-11-10",
-          "id": "2611.14059v1",
-          "url": "https://arxiv.org/abs/2611.14059v1"
+          "published": "2026-11-13",
+          "id": "2611.18067v1",
+          "url": "https://arxiv.org/abs/2611.18067v1"
         },
         {
-          "title": "From Attack Surface to Defense Architecture: Compositional Security for Agentic Coding Harnesses",
+          "title": "SAGE-QA: Semantic-Aware, Grounded Evaluation for Closed-Context Question Answering on SQuAD 2.0",
           "authors": [
-            "Simon Hegelich",
-            "Bardh Prenkaj",
-            "Habiba Sarhan",
-            "Morteza Shahrezaye",
-            "Kolja Hegelich",
-            "Christian Montag",
-            "Ralf Schneider",
-            "Erik Cambria"
+            "Chandra N Sekharan",
+            "Vishakan Umapathy",
+            "Abhishek Phadke"
           ],
-          "published": "2026-11-10",
-          "id": "2611.13960v1",
-          "url": "https://arxiv.org/abs/2611.13960v1"
+          "published": "2026-11-12",
+          "id": "2611.16300v1",
+          "url": "https://arxiv.org/abs/2611.16300v1"
         },
         {
-          "title": "Taxonomy-Agnostic Neurosymbolic Grounding of Robot Kinematics",
+          "title": "Is Jev a Good Multilingual Judge?",
           "authors": [
-            "Bastien Dussard",
-            "Aur{é}lie Clodic",
-            "Guillaume Sarthou"
+            "Wei Liu",
+            "Yi Fan",
+            "Xiyan Fu"
           ],
-          "published": "2026-11-10",
-          "id": "2611.13850v1",
-          "url": "https://arxiv.org/abs/2611.13850v1"
+          "published": "2026-11-11",
+          "id": "2611.14861v1",
+          "url": "https://arxiv.org/abs/2611.14861v1"
         }
       ]
     }
